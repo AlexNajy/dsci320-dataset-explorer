@@ -1,0 +1,11 @@
+dataset,column,guessed_type
+test.csv,student_id,categorical
+test.csv,name,categorical
+test.csv,major,categorical
+test.csv,enrollment_date,temporal
+test.csv,gpa,categorical
+test.csv,age,categorical
+test.csv,city,geographic
+test.csv,latitude,geographic
+test.csv,longitude,geographic
+test.csv,status,categorical

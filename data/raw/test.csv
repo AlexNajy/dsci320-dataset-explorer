@@ -1,0 +1,6 @@
+student_id,name,major,enrollment_date,gpa,age,city,latitude,longitude,status
+1,Alex,Biology,2021-09-01,3.4,20,Vancouver,49.28,-123.12,active
+2,Jordan,Physics,2020-09-01,3.7,22,Toronto,43.65,-79.38,active
+3,Sam,Chemistry,2022-09-01,2.9,19,Vancouver,49.28,-123.12,inactive
+4,Taylor,Biology,2019-09-01,3.1,23,Montreal,45.50,-73.57,graduated
+5,Casey,Physics,2021-09-01,3.9,21,Toronto,43.65,-79.38,active
