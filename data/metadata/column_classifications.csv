@@ -1,28 +1,28 @@
 dataset,column,guessed_type
 Anime.csv,animeID,categorical
-Anime.csv, name,categorical
-Anime.csv, title_english,categorical
-Anime.csv, title_japanese,categorical
-Anime.csv, title_synonyms,categorical
-Anime.csv, type,categorical
-Anime.csv, source,categorical
-Anime.csv, producers,categorical
-Anime.csv, genre,categorical
-Anime.csv, studio,categorical
-Anime.csv, episodes,quantitative
-Anime.csv, status,categorical
-Anime.csv, airing,categorical
-Anime.csv, aired,categorical
-Anime.csv, duration,categorical
-Anime.csv, rating,categorical
-Anime.csv, score,quantitative
-Anime.csv, scored_by,quantitative
-Anime.csv, rank,categorical
-Anime.csv, popularity,quantitative
-Anime.csv, members,quantitative
-Anime.csv, favorites,quantitative
-Anime.csv, synopsis,categorical
-Anime.csv, background,categorical
-Anime.csv, premiered,categorical
-Anime.csv, broadcast,categorical
-Anime.csv, related,geographic
+Anime.csv,name,categorical
+Anime.csv,title_english,categorical
+Anime.csv,title_japanese,categorical
+Anime.csv,title_synonyms,categorical
+Anime.csv,type,categorical
+Anime.csv,source,categorical
+Anime.csv,producers,categorical
+Anime.csv,genre,categorical
+Anime.csv,studio,categorical
+Anime.csv,episodes,quantitative
+Anime.csv,status,categorical
+Anime.csv,airing,categorical
+Anime.csv,aired,categorical
+Anime.csv,duration,categorical
+Anime.csv,rating,categorical
+Anime.csv,score,quantitative
+Anime.csv,scored_by,quantitative
+Anime.csv,rank,categorical
+Anime.csv,popularity,quantitative
+Anime.csv,members,quantitative
+Anime.csv,favorites,quantitative
+Anime.csv,synopsis,categorical
+Anime.csv,background,categorical
+Anime.csv,premiered,categorical
+Anime.csv,broadcast,categorical
+Anime.csv,related,geographic

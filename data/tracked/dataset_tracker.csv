@@ -1,2 +1,2 @@
-dataset_name,downloaded,file_path,has__abstraction,num_colums,correct,incorrect,notes,source_url
-Anime,1,data/raw/Anime.csv,1,27,23,4,"Keywords in AnimeID and Rank chose cat over quant, related contains ""lat"" chose geo over cat, Aired had no keywords chose cat over temp",https://www.kaggle.com/datasets/aludosan/myanimelist-anime-dataset-as-20190204?resource=download
+name,filepath,num_columns,has_abstraction,correct_guesses,incorrect_guesses
+Anime,../data/raw/Anime.csv,27,True,21,6
