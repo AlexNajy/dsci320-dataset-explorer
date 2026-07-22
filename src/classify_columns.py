@@ -5,6 +5,7 @@ from pandas.api.types import (
     is_datetime64_any_dtype
 )
 
+# Change to "data/raw_test" for testing
 data_folder = "data/raw"
 
 results = []
