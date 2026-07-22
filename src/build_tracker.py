@@ -23,22 +23,24 @@ def build_tracker():
 
         correct_guesses = None
         incorrect_guesses = None
+        unmatched_columns = None
 
         if has_abstraction:
             answer_key = pd.read_csv(answer_key_path)
             answer_dict = dict(zip(answer_key["column"], answer_key["true_type"]))
             dataset_guesses = classifications[classifications["dataset"] == filename]
 
-            correct = incorrect = 0
+            correct = incorrect = unmatched = 0
             for _, row in dataset_guesses.iterrows():
                 true_type = answer_dict.get(row["column"])
                 if true_type is None:
+                    unmatched += 1
                     continue
                 if row["guessed_type"] == true_type:
                     correct += 1
                 else:
                     incorrect += 1
-            correct_guesses, incorrect_guesses = correct, incorrect
+            correct_guesses, incorrect_guesses, unmatched_columns = correct, incorrect, unmatched
 
         rows.append({
             "name": base_name,
@@ -47,6 +49,7 @@ def build_tracker():
             "has_abstraction": has_abstraction,
             "correct_guesses": correct_guesses,
             "incorrect_guesses": incorrect_guesses,
+            "unmatched_columns": unmatched_columns,
         })
 
     output = pd.DataFrame(rows)

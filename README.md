@@ -9,7 +9,7 @@ dsci320-dataset-explorer/
 ├── data/
 │   ├── abstractions/          Answer Key for CSVs that include an abstraction (name must match the file in raw/)
 │   ├── metadata/              Result of script including column classifications
-│   ├── raw/                   Downloaded datasets as CSV files
+│   ├── raw/                   Locally downloaded datasets as CSV files
 │   ├── raw_test/              A test folder of sample data
 │   └── tracked/               Includes a log of all processed data tables compared to potential abstractions
 ├── src/
