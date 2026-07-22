@@ -1,0 +1,21 @@
+column,true_type
+steam_appid,categorical
+name,categorical
+developers,categorical
+publishers,categorical
+categories,categorical
+genres,categorical
+required_age,categorical
+n_achievements,quantitative
+platforms,categorical
+release_date,temporal
+additional_content,categorical
+total_reviews,quantitative
+total_positive,quantitative
+total_negative,quantitative
+review_score,categorical
+review_score_desc,categorical
+positive_percentual,quantitative
+metacritic,quantitative
+is_free,categorical
+price_initial (USD),quantitative
