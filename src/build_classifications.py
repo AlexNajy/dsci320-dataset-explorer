@@ -15,6 +15,7 @@ def build_classifications():
         for col in df.columns:
             guess = classify_column(df[col], col)
             results.append({"dataset": filename, "column": col, "guessed_type": guess})
+        print(f"Classified: {filename}")
 
     output = pd.DataFrame(results)
     output.to_csv(OUTPUT_PATH, index=False)
