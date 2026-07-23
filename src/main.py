@@ -8,6 +8,5 @@ def main():
     build_tracker()
     print("Done.")
 
-# Claude said to include this (allows for safe importing)
 if __name__ == "__main__":
     main()

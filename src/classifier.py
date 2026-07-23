@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 
 CATEGORICAL_UNIQUE_THRESHOLD = 10
 
@@ -17,18 +18,23 @@ categorical_keywords = [
     "group", "label", "status", "rank", "tier",
 ]
 
+# Use regular expressions to check if a keyword is not a substring of another word
+def contains_keyword(col_name, keywords):
+    name = col_name.lower()
+    return any(re.search(rf'(^|_){re.escape(kw)}($|_)', name) for kw in keywords)
+
 def classify_column(series, col_name):
-    if any(kw in col_name.lower() for kw in geo_keywords):
+    if contains_keyword(col_name, geo_keywords):
         return "geographic"
 
     if pd.api.types.is_datetime64_any_dtype(series):
         return "temporal"
 
-    if any(kw in col_name.lower() for kw in temporal_keywords):
+    if contains_keyword(col_name, temporal_keywords):
         return "temporal"
 
     if pd.api.types.is_numeric_dtype(series):
-        if any(kw in col_name.lower() for kw in categorical_keywords):
+        if contains_keyword(col_name, categorical_keywords):
             return "categorical"
         if series.nunique() <= CATEGORICAL_UNIQUE_THRESHOLD:
             return "categorical"
