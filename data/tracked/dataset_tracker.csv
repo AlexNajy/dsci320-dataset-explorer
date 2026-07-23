@@ -1,3 +1,6 @@
 name,filepath,num_columns,has_abstraction,correct_guesses,incorrect_guesses,unmatched_columns
+games_march2025_cleaned,../data/raw/games_march2025_cleaned.csv,47,True,42,5,0
 Anime,../data/raw/Anime.csv,27,True,21,6,0
 accident_data,../data/raw/accident_data.csv,34,True,29,4,1
+athlete_events,../data/raw/athlete_events.csv,15,True,14,1,0
+V-Dem-CY-Full+Others-v16,../data/raw/V-Dem-CY-Full+Others-v16.csv,4618,True,34,4,4580

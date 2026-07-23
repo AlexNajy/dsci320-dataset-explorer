@@ -10,7 +10,7 @@ def build_classifications():
     for filename in os.listdir(RAW_FOLDER):
         if not filename.endswith(".csv"):
             continue
-        df = pd.read_csv(os.path.join(RAW_FOLDER, filename))
+        df = pd.read_csv(os.path.join(RAW_FOLDER, filename), low_memory=False)
         df.columns = df.columns.str.strip()
         for col in df.columns:
             guess = classify_column(df[col], col)
