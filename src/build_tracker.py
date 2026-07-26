@@ -25,6 +25,14 @@ def build_tracker():
         incorrect_guesses = None
         unmatched_columns = None
 
+        dataset_guesses = classifications[classifications["dataset"] == filename]
+
+        type_counts = dataset_guesses["guessed_type"].value_counts()
+        num_quantitative = int(type_counts.get("quantitative", 0))
+        num_categorical = int(type_counts.get("categorical", 0))
+        num_temporal = int(type_counts.get("temporal", 0))
+        num_geographic = int(type_counts.get("geographic", 0))
+
         if has_abstraction:
             answer_key = pd.read_csv(answer_key_path)
             answer_dict = dict(zip(answer_key["column"], answer_key["true_type"]))
@@ -42,14 +50,26 @@ def build_tracker():
                     incorrect += 1
             correct_guesses, incorrect_guesses, unmatched_columns = correct, incorrect, unmatched
 
+        meets_minimum = (
+            num_quantitative >= 12 and
+            num_categorical >= 4 and
+            num_temporal >= 2 and
+            num_geographic >= 2
+        )
+
         rows.append({
             "name": base_name,
             "filepath": filepath,
             "num_columns": num_columns,
+            "num_quantitative": num_quantitative,
+            "num_categorical": num_categorical,
+            "num_temporal": num_temporal,
+            "num_geographic": num_geographic,
             "has_abstraction": has_abstraction,
             "correct_guesses": correct_guesses,
             "incorrect_guesses": incorrect_guesses,
             "unmatched_columns": unmatched_columns,
+            "meets_minimum": meets_minimum
         })
 
     output = pd.DataFrame(rows)

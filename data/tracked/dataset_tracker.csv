@@ -1,7 +1,7 @@
-name,filepath,num_columns,has_abstraction,correct_guesses,incorrect_guesses,unmatched_columns
-anime,../data/raw/anime.csv,27,True,23,4,0
-emmisions,../data/raw/emmisions.csv,80,True,80,0,0
-accidents,../data/raw/accidents.csv,34,True,29,4,1
-dem,../data/raw/dem.csv,4618,True,34,4,4580
-games,../data/raw/games.csv,47,True,45,2,0
-athlete_events,../data/raw/athlete_events.csv,15,True,14,1,0
+name,filepath,num_columns,num_quantitative,num_categorical,num_temporal,num_geographic,has_abstraction,correct_guesses,incorrect_guesses,unmatched_columns,meets_minimum
+anime,../data/raw/anime.csv,27,7,20,0,0,True,23,4,0,False
+emmisions,../data/raw/emmisions.csv,80,76,3,1,0,True,80,0,0,False
+accidents,../data/raw/accidents.csv,34,6,22,4,2,True,29,4,1,False
+dem,../data/raw/dem.csv,4618,3342,1271,2,3,True,34,4,4580,True
+games,../data/raw/games.csv,47,20,26,1,0,True,45,2,0,False
+athlete_events,../data/raw/athlete_events.csv,15,3,10,1,1,True,14,1,0,False
