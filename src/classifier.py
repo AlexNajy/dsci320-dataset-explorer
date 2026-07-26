@@ -10,7 +10,7 @@ geo_keywords = {
 }
 
 temporal_keywords = {
-    "date", "time", "year", "month", "day", "timestamp"
+    "date", "time", "year", "month", "day", "timestamp", "datetime"
 }
 
 categorical_keywords = [
@@ -18,7 +18,6 @@ categorical_keywords = [
     "group", "label", "status", "rank", "tier",
 ]
 
-# Use regular expressions to check if a keyword is not a substring of another word
 def contains_keyword(col_name, keywords):
     name = col_name.lower()
     return any(re.search(rf'(^|_){re.escape(kw)}($|_)', name) for kw in keywords)

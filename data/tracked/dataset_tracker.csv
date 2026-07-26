@@ -5,3 +5,4 @@ accidents,../data/raw/accidents.csv,34,6,22,4,2,True,29,4,1,False
 dem,../data/raw/dem.csv,4618,3342,1271,2,3,True,34,4,4580,True
 games,../data/raw/games.csv,47,20,26,1,0,True,45,2,0,False
 athlete_events,../data/raw/athlete_events.csv,15,3,10,1,1,True,14,1,0,False
+taxi,../data/raw/taxi.csv,20,5,13,2,0,True,10,9,1,False

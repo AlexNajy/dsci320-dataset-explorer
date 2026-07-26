@@ -48,13 +48,3 @@ This runs both steps in order
 ## Naming rule
 *data/raw/X.csv* must match *data/abstractions/X.csv* exactly for scoring to work.
 
-## Current Issues
-
-- Columns **animeID** and **rank** are forced to categorical because their name contains "id" or "rank", even when they are quantitative.
-- Temporal columns like **aired** and **premiered** don't contain an obvious date keyword so they fall through to categorical.
-- A real quantitative column with few unique values (e.g. **duration**) gets miscaught as categorical.
-- keyword matching isn't aware of word boundaries, so **related** matches the "lat" inside it and gets tagged geographic.
-
-## Notes
-For a future system that has to automatically intake and classify new datasets use AI to catch classification discrepencies 
-
