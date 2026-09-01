@@ -2,7 +2,7 @@ dataset,column,guessed_type
 global_emissions.csv,Description,categorical
 global_emissions.csv,Name,categorical
 global_emissions.csv,year,temporal
-global_emissions.csv,iso_code,categorical
+global_emissions.csv,iso_code,geographic
 global_emissions.csv,population,quantitative
 global_emissions.csv,gdp,quantitative
 global_emissions.csv,cement_co2,quantitative
@@ -4697,7 +4697,7 @@ vdem.csv,e_ovexist_0,categorical
 vdem.csv,e_ovexist_1,categorical
 vdem.csv,e_ovexist_2,categorical
 vdem.csv,e_ovexist_3,categorical
-anime.csv,animeID,quantitative
+anime.csv,animeID,categorical
 anime.csv,name,categorical
 anime.csv,title_english,categorical
 anime.csv,title_japanese,categorical
@@ -4740,10 +4740,10 @@ accidents.csv,Latitude,geographic
 accidents.csv,Light_Conditions,categorical
 accidents.csv,Local_Authority_(District),categorical
 accidents.csv,Local_Authority_(Highway),categorical
-accidents.csv,Location_Easting_OSGR,quantitative
-accidents.csv,Location_Northing_OSGR,quantitative
+accidents.csv,Location_Easting_OSGR,geographic
+accidents.csv,Location_Northing_OSGR,geographic
 accidents.csv,Longitude,geographic
-accidents.csv,LSOA_of_Accident_Location,categorical
+accidents.csv,LSOA_of_Accident_Location,geographic
 accidents.csv,Number_of_Casualties,quantitative
 accidents.csv,Number_of_Vehicles,quantitative
 accidents.csv,Pedestrian_Crossing-Human_Control,categorical
@@ -4763,8 +4763,8 @@ nyc_taxi.csv,lpep_pickup_datetime,temporal
 nyc_taxi.csv,lpep_dropoff_datetime,temporal
 nyc_taxi.csv,store_and_fwd_flag,categorical
 nyc_taxi.csv,RatecodeID,categorical
-nyc_taxi.csv,PULocationID,quantitative
-nyc_taxi.csv,DOLocationID,quantitative
+nyc_taxi.csv,PULocationID,geographic
+nyc_taxi.csv,DOLocationID,geographic
 nyc_taxi.csv,passenger_count,categorical
 nyc_taxi.csv,trip_distance,categorical
 nyc_taxi.csv,fare_amount,categorical
@@ -4781,7 +4781,7 @@ nyc_taxi.csv,congestion_surcharge,categorical
 policing_charlotte.csv,raw_row_number,quantitative
 policing_charlotte.csv,date,temporal
 policing_charlotte.csv,time,temporal
-policing_charlotte.csv,location,categorical
+policing_charlotte.csv,location,geographic
 policing_charlotte.csv,county_name,categorical
 policing_charlotte.csv,subject_age,quantitative
 policing_charlotte.csv,subject_race,categorical
@@ -4861,7 +4861,7 @@ athlete_events.csv,Age,quantitative
 athlete_events.csv,Height,quantitative
 athlete_events.csv,Weight,quantitative
 athlete_events.csv,Team,categorical
-athlete_events.csv,NOC,categorical
+athlete_events.csv,NOC,geographic
 athlete_events.csv,Games,categorical
 athlete_events.csv,Year,temporal
 athlete_events.csv,Season,categorical
