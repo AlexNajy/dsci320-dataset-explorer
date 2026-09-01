@@ -1,0 +1,9 @@
+name,filepath,num_columns,num_quantitative,num_categorical,num_temporal,num_geographic,has_abstraction,correct_guesses,incorrect_guesses,unmatched_columns,meets_minimum
+global_emissions,../data/raw/global_emissions.csv,80,76,3,1,0,False,,,,False
+vdem,../data/raw/vdem.csv,4618,3342,1271,2,3,True,34.0,4.0,4580.0,True
+anime,../data/raw/anime.csv,27,7,20,0,0,True,23.0,4.0,0.0,False
+accidents,../data/raw/accidents.csv,34,6,22,4,2,True,29.0,4.0,1.0,False
+nyc_taxi,../data/raw/nyc_taxi.csv,20,5,13,2,0,True,10.0,9.0,1.0,False
+policing_charlotte,../data/raw/policing_charlotte.csv,29,2,25,2,0,True,22.0,0.0,7.0,False
+games,../data/raw/games.csv,47,20,26,1,0,True,45.0,2.0,0.0,False
+athlete_events,../data/raw/athlete_events.csv,15,3,10,1,1,True,14.0,1.0,0.0,False

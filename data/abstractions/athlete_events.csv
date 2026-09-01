@@ -1,0 +1,16 @@
+column,true_type
+ID,categorical
+Name,categorical
+Sex,categorical
+Age,quantitative
+Height,quantitative
+Weight,quantitative
+Team,categorical
+NOC,categorical
+Games,categorical
+Year,temporal
+Season,categorical
+City,categorical
+Sport,categorical
+Event,categorical
+Medal,categorical
