@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dataset Explorer</title>
+</head>
+<body>
+  <h1>Dataset Explorer</h1>
+  <div id="results"></div>
+
+  <script>
+    fetch("data.json")
+      .then(res => res.json())
+      .then(datasets => {
+        const container = document.getElementById("results");
+        datasets.forEach(d => {
+          const card = document.createElement("div");
+          card.innerHTML = `
+            <h3>${d.name}</h3>
+            <p>Quant: ${d.num_quantitative} | Categorical: ${d.num_categorical} | Temporal: ${d.num_temporal} | Geographic: ${d.num_geographic}</p>
+            <p>Meets minimum: ${d.meets_minimum}</p>
+            <hr>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
