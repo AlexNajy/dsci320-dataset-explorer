@@ -3,6 +3,7 @@
     --color-text-primary: #1A1A1A;
     --color-text-secondary: #5F6368;
     --color-white: #FFFFFF;
+    --topbar-height: 116px;
   }
 
   * {
@@ -15,13 +16,16 @@
     font-family: 'IBM Plex Sans', -apple-system, sans-serif;
     background: #F6F7F9;
     color: var(--color-text-primary);
+    padding-top: var(--topbar-height);
   }
-  
+
   .topbar {
     background: var(--color-brand);
     padding: 16px 0 20px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
   }
   
@@ -32,8 +36,8 @@
     padding: 0 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 20px;
   }
   
   .topbar-title-row {
@@ -49,6 +53,13 @@
     white-space: nowrap;
   }
   
+  .search-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
   .search-bar {
     display: flex;
     align-items: center;
@@ -57,9 +68,35 @@
     border-radius: 4px;
     padding: 0 12px;
     height: 36px;
-    width: 100%;
+    flex: 1 1 auto;
     max-width: 480px;
     color: var(--color-text-secondary);
+  }
+
+  .filter-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 14px;
+    background: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+
+  .filter-toggle-btn:hover {
+    color: var(--color-brand);
+  }
+
+  .filter-toggle-btn[aria-pressed="true"] {
+    background: var(--color-brand);
+    color: var(--color-white);
   }
 
   .search-bar input {
@@ -80,6 +117,92 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 32px 24px 64px;
+  }
+
+  .filter-bar {
+    background: var(--color-white);
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    cursor: pointer;
+  }
+
+  .filter-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-brand);
+    cursor: pointer;
+  }
+
+  .filter-minimums {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .filter-field label {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+  }
+
+  .filter-field input {
+    width: 72px;
+    height: 32px;
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    padding: 0 8px;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--color-text-primary);
+  }
+
+  .filter-field input:focus {
+    outline: none;
+    border-color: var(--color-brand);
+  }
+
+  .filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-chip {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid #DADCE0;
+    background: var(--color-white);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+  }
+
+  .filter-chip:hover {
+    border-color: var(--color-brand);
+    color: var(--color-brand);
   }
   
   .dataset-grid {

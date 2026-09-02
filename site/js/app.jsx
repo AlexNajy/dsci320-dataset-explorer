@@ -1,7 +1,8 @@
 function App() {
     const [datasets, setDatasets] = React.useState([]);
     const [error, setError] = React.useState(null);
-  
+    const [showFilters, setShowFilters] = React.useState(false);
+
     React.useEffect(() => {
       fetch("data.json")
         .then(res => res.json())
@@ -14,8 +15,9 @@ function App() {
   
     return (
       <div>
-        <Topbar />
+        <Topbar filtersVisible={showFilters} onToggleFilters={() => setShowFilters(v => !v)} />
         <main className="content">
+          {showFilters && <FilterBar />}
           <div className="dataset-grid">
             <UploadCard />
             {error && <p style={{ color: "#5F6368" }}>{error}</p>}
