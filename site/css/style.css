@@ -1,19 +1,24 @@
-* {
+:root {
+    --color-brand: #0055B7;
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #5F6368;
+    --color-white: #FFFFFF;
+  }
+
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
-  
+
   body {
     font-family: 'IBM Plex Sans', -apple-system, sans-serif;
     background: #F6F7F9;
-    color: #1A1A1A;
+    color: var(--color-text-primary);
   }
   
-  /* --- Top bar --- */
-  
   .topbar {
-    background: #0055B7;
+    background: var(--color-brand);
     padding: 16px 0 20px;
     position: sticky;
     top: 0;
@@ -38,7 +43,7 @@
   }
   
   .topbar-title {
-    color: #FFFFFF;
+    color: var(--color-white);
     font-size: 18px;
     font-weight: 600;
     white-space: nowrap;
@@ -48,30 +53,28 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #FFFFFF;
+    background: var(--color-white);
     border-radius: 4px;
     padding: 0 12px;
     height: 36px;
     width: 100%;
     max-width: 480px;
-    color: #5F6368;
+    color: var(--color-text-secondary);
   }
-  
+
   .search-bar input {
     border: none;
     outline: none;
     background: transparent;
     font-family: inherit;
     font-size: 14px;
-    color: #1A1A1A;
+    color: var(--color-text-primary);
     width: 100%;
   }
-  
+
   .search-bar input::placeholder {
-    color: #5F6368;
+    color: var(--color-text-secondary);
   }
-  
-  /* --- Content --- */
   
   .content {
     max-width: 1200px;
@@ -85,10 +88,8 @@
     gap: 24px;
   }
   
-  /* --- Dataset card --- */
-  
   .dataset-card {
-    background: #FFFFFF;
+    background: var(--color-white);
     border: 1px solid #DADCE0;
     border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
@@ -107,7 +108,7 @@
   .card-name {
     font-size: 15px;
     font-weight: 600;
-    color: #1A1A1A;
+    color: var(--color-text-primary);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -127,15 +128,15 @@
   
   .stat-label {
     font-size: 11px;
-    color: #5F6368;
+    color: var(--color-text-secondary);
     text-transform: none;
   }
-  
+
   .stat-value {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
     font-weight: 500;
-    color: #1A1A1A;
+    color: var(--color-text-primary);
   }
   
   .tag-row {
@@ -168,7 +169,7 @@
   
   .status-badge.fail {
     background: #F1F3F4;
-    color: #5F6368;
+    color: var(--color-text-secondary);
   }
   
   .upload-card {
@@ -179,18 +180,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     min-height: 180px;
-    color: #5F6368;
+    color: var(--color-text-secondary);
     cursor: pointer;
   }
   
-  .upload-card:hover {
-    border-color: #0055B7;
-    color: #0055B7;
+  .upload-card svg {
+    display: block;
   }
   
+  .upload-card:hover {
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+  }
+
   .upload-label {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text-primary);
   }

@@ -56,7 +56,7 @@ function StatItem({ label, value }) {
           <path d="M12 5V19" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
           <path d="M5 12H19" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
-        <span className="upload-label">Upload dataset</span>
+        <span className="upload-label">Upload a Dataset</span>
       </div>
     );
   }
