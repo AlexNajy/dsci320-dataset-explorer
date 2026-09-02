@@ -1,9 +1,9 @@
-name,filepath,num_columns,num_quantitative,num_categorical,num_temporal,num_geographic,has_abstraction,correct_guesses,incorrect_guesses,unmatched_columns,meets_minimum
-global_emissions,../data/raw/global_emissions.csv,80,76,2,1,1,False,,,,False
-vdem,../data/raw/vdem.csv,4618,3342,1271,2,3,True,34.0,4.0,4580.0,True
-anime,../data/raw/anime.csv,27,6,21,0,0,True,22.0,5.0,0.0,False
-accidents,../data/raw/accidents.csv,34,4,21,4,5,True,30.0,3.0,1.0,False
-nyc_taxi,../data/raw/nyc_taxi.csv,20,3,13,2,2,True,12.0,7.0,1.0,False
-policing_charlotte,../data/raw/policing_charlotte.csv,29,2,24,2,1,True,22.0,0.0,7.0,False
-games,../data/raw/games.csv,47,20,26,1,0,True,45.0,2.0,0.0,False
-athlete_events,../data/raw/athlete_events.csv,15,3,9,1,2,True,13.0,2.0,0.0,False
+name,filepath,num_columns,num_quantitative,num_categorical,num_temporal,num_geographic,has_abstraction,correct_guesses,incorrect_guesses,unmatched_columns,meets_minimum,ml_tags,ml_reasons
+global_emissions,../data/raw/global_emissions.csv,80,76,2,1,1,False,,,,False,"classification, regression","{'classification': ""categorical column 'Description' has 5 unique values, suitable as a classification target"", 'regression': '76 quantitative columns available as potential targets/features'}"
+vdem,../data/raw/vdem.csv,4618,3342,1271,2,3,True,34.0,4.0,4580.0,True,"classification, regression, forecasting","{'classification': ""categorical column 'project' has 3 unique values, suitable as a classification target"", 'regression': '3342 quantitative columns available as potential targets/features', 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
+anime,../data/raw/anime.csv,27,6,21,0,0,True,22.0,5.0,0.0,False,clustering,"{'clustering': '6 quantitative columns present, no obvious target variable'}"
+accidents,../data/raw/accidents.csv,34,4,21,4,5,True,30.0,3.0,1.0,False,"classification, forecasting","{'classification': ""categorical column '1st_Road_Class' has 5 unique values, suitable as a classification target"", 'forecasting': '4 temporal columns present, allowing time-based analysis'}"
+nyc_taxi,../data/raw/nyc_taxi.csv,20,3,13,2,2,True,12.0,7.0,1.0,False,"classification, forecasting","{'classification': ""categorical column 'VendorID' has 2 unique values, suitable as a classification target"", 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
+policing_charlotte,../data/raw/policing_charlotte.csv,29,2,24,2,1,True,22.0,0.0,7.0,False,"classification, forecasting","{'classification': ""categorical column 'county_name' has 7 unique values, suitable as a classification target"", 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
+games,../data/raw/games.csv,47,20,26,1,0,True,45.0,2.0,0.0,False,"classification, regression","{'classification': ""categorical column 'windows' has 2 unique values, suitable as a classification target"", 'regression': '20 quantitative columns available as potential targets/features'}"
+athlete_events,../data/raw/athlete_events.csv,15,3,9,1,2,True,13.0,2.0,0.0,False,classification,"{'classification': ""categorical column 'Sex' has 2 unique values, suitable as a classification target""}"

@@ -11,7 +11,9 @@
     "correct_guesses":null,
     "incorrect_guesses":null,
     "unmatched_columns":null,
-    "meets_minimum":false
+    "meets_minimum":false,
+    "ml_tags":"classification, regression",
+    "ml_reasons":"{'classification': \"categorical column 'Description' has 5 unique values, suitable as a classification target\", 'regression': '76 quantitative columns available as potential targets\/features'}"
   },
   {
     "name":"vdem",
@@ -25,7 +27,9 @@
     "correct_guesses":34.0,
     "incorrect_guesses":4.0,
     "unmatched_columns":4580.0,
-    "meets_minimum":true
+    "meets_minimum":true,
+    "ml_tags":"classification, regression, forecasting",
+    "ml_reasons":"{'classification': \"categorical column 'project' has 3 unique values, suitable as a classification target\", 'regression': '3342 quantitative columns available as potential targets\/features', 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
   },
   {
     "name":"anime",
@@ -39,7 +43,9 @@
     "correct_guesses":22.0,
     "incorrect_guesses":5.0,
     "unmatched_columns":0.0,
-    "meets_minimum":false
+    "meets_minimum":false,
+    "ml_tags":"clustering",
+    "ml_reasons":"{'clustering': '6 quantitative columns present, no obvious target variable'}"
   },
   {
     "name":"accidents",
@@ -53,7 +59,9 @@
     "correct_guesses":30.0,
     "incorrect_guesses":3.0,
     "unmatched_columns":1.0,
-    "meets_minimum":false
+    "meets_minimum":false,
+    "ml_tags":"classification, forecasting",
+    "ml_reasons":"{'classification': \"categorical column '1st_Road_Class' has 5 unique values, suitable as a classification target\", 'forecasting': '4 temporal columns present, allowing time-based analysis'}"
   },
   {
     "name":"nyc_taxi",
@@ -67,7 +75,9 @@
     "correct_guesses":12.0,
     "incorrect_guesses":7.0,
     "unmatched_columns":1.0,
-    "meets_minimum":false
+    "meets_minimum":false,
+    "ml_tags":"classification, forecasting",
+    "ml_reasons":"{'classification': \"categorical column 'VendorID' has 2 unique values, suitable as a classification target\", 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
   },
   {
     "name":"policing_charlotte",
@@ -81,7 +91,9 @@
     "correct_guesses":22.0,
     "incorrect_guesses":0.0,
     "unmatched_columns":7.0,
-    "meets_minimum":false
+    "meets_minimum":false,
+    "ml_tags":"classification, forecasting",
+    "ml_reasons":"{'classification': \"categorical column 'county_name' has 7 unique values, suitable as a classification target\", 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
   },
   {
     "name":"games",
@@ -95,7 +107,9 @@
     "correct_guesses":45.0,
     "incorrect_guesses":2.0,
     "unmatched_columns":0.0,
-    "meets_minimum":false
+    "meets_minimum":false,
+    "ml_tags":"classification, regression",
+    "ml_reasons":"{'classification': \"categorical column 'windows' has 2 unique values, suitable as a classification target\", 'regression': '20 quantitative columns available as potential targets\/features'}"
   },
   {
     "name":"athlete_events",
@@ -109,6 +123,8 @@
     "correct_guesses":13.0,
     "incorrect_guesses":2.0,
     "unmatched_columns":0.0,
-    "meets_minimum":false
+    "meets_minimum":false,
+    "ml_tags":"classification",
+    "ml_reasons":"{'classification': \"categorical column 'Sex' has 2 unique values, suitable as a classification target\"}"
   }
 ]
