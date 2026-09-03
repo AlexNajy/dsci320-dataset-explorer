@@ -1,4 +1,11 @@
-function StatItem({ label, value }) {
+function parseTags(tagsString) {
+    return (tagsString || "")
+      .split(",")
+      .map(t => t.trim())
+      .filter(Boolean);
+  }
+
+  function StatItem({ label, value }) {
     return (
       <div className="stat-item">
         <span className="stat-label">{label}</span>
@@ -8,11 +15,8 @@ function StatItem({ label, value }) {
   }
   
   function TagRow({ tagsString }) {
-    const tags = (tagsString || "")
-      .split(",")
-      .map(t => t.trim())
-      .filter(Boolean);
-  
+    const tags = parseTags(tagsString);
+
     if (tags.length === 0) return null;
   
     return (
@@ -25,11 +29,8 @@ function StatItem({ label, value }) {
   }
   
   function DatasetCard({ dataset }) {
-    const meetsMinimum =
-      dataset.meets_minimum === true ||
-      dataset.meets_minimum === "True" ||
-      dataset.meets_minimum === "true";
-  
+    const passes = dataset.meets_minimum === true;
+
     return (
       <div className="dataset-card">
         <div className="card-body">
@@ -41,8 +42,8 @@ function StatItem({ label, value }) {
             <StatItem label="Geographic" value={dataset.num_geographic} />
           </div>
           <TagRow tagsString={dataset.ml_tags} />
-          <span className={`status-badge ${meetsMinimum ? "pass" : "fail"}`}>
-            {meetsMinimum ? "Meets minimum" : "Below minimum"}
+          <span className={`status-badge ${passes ? "pass" : "fail"}`}>
+            {passes ? "Meets minimum" : "Below minimum"}
           </span>
         </div>
       </div>

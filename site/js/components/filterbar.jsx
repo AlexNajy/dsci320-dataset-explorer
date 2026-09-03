@@ -1,35 +1,50 @@
 const ML_TAG_OPTIONS = ["Classification", "Regression", "Forecasting", "Clustering"];
 
-function FilterBar() {
+const MIN_FIELDS = [
+  { key: "minQuantitative", dataKey: "num_quantitative", label: "Min Quantitative" },
+  { key: "minCategorical", dataKey: "num_categorical", label: "Min Categorical" },
+  { key: "minTemporal", dataKey: "num_temporal", label: "Min Temporal" },
+  { key: "minGeographic", dataKey: "num_geographic", label: "Min Geographic" },
+];
+
+function FilterBar({ filters, onChange, onToggleTag }) {
   return (
     <div className="filter-bar">
       <label className="filter-checkbox">
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          checked={filters.meetsMinOnly}
+          onChange={e => onChange("meetsMinOnly", e.target.checked)}
+        />
         <span>Meets minimum requirements</span>
       </label>
 
       <div className="filter-minimums">
-        <div className="filter-field">
-          <label htmlFor="min-quantitative">Min Quantitative</label>
-          <input id="min-quantitative" type="number" min="0" placeholder="0" />
-        </div>
-        <div className="filter-field">
-          <label htmlFor="min-categorical">Min Categorical</label>
-          <input id="min-categorical" type="number" min="0" placeholder="0" />
-        </div>
-        <div className="filter-field">
-          <label htmlFor="min-temporal">Min Temporal</label>
-          <input id="min-temporal" type="number" min="0" placeholder="0" />
-        </div>
-        <div className="filter-field">
-          <label htmlFor="min-geographic">Min Geographic</label>
-          <input id="min-geographic" type="number" min="0" placeholder="0" />
-        </div>
+        {MIN_FIELDS.map(({ key, label }) => (
+          <div className="filter-field" key={key}>
+            <label htmlFor={key}>{label}</label>
+            <input
+              id={key}
+              type="number"
+              min="0"
+              placeholder="0"
+              value={filters[key]}
+              onChange={e => onChange(key, e.target.value)}
+            />
+          </div>
+        ))}
       </div>
 
       <div className="filter-tags">
         {ML_TAG_OPTIONS.map(tag => (
-          <button type="button" className="filter-chip" key={tag}>{tag}</button>
+          <button
+            type="button"
+            className={`filter-chip${filters.tags.includes(tag) ? " active" : ""}`}
+            key={tag}
+            onClick={() => onToggleTag(tag)}
+          >
+            {tag}
+          </button>
         ))}
       </div>
     </div>

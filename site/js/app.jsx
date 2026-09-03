@@ -2,6 +2,34 @@ function App() {
     const [datasets, setDatasets] = React.useState([]);
     const [error, setError] = React.useState(null);
     const [showFilters, setShowFilters] = React.useState(false);
+    const [filters, setFilters] = React.useState({
+      meetsMinOnly: false,
+      ...Object.fromEntries(MIN_FIELDS.map(({ key }) => [key, ""])),
+      tags: [],
+    });
+
+    const updateFilter = (key, value) =>
+      setFilters(prev => ({ ...prev, [key]: value }));
+
+    const toggleTag = tag =>
+      setFilters(prev => ({
+        ...prev,
+        tags: prev.tags.includes(tag)
+          ? prev.tags.filter(t => t !== tag)
+          : [...prev.tags, tag],
+      }));
+
+    const filteredDatasets = datasets.filter(dataset => {
+      if (filters.meetsMinOnly && dataset.meets_minimum !== true) return false;
+      if (MIN_FIELDS.some(({ key, dataKey }) => filters[key] && Number(dataset[dataKey]) < Number(filters[key]))) {
+        return false;
+      }
+      if (filters.tags.length > 0) {
+        const datasetTags = parseTags(dataset.ml_tags).map(t => t.toLowerCase());
+        if (!filters.tags.every(tag => datasetTags.includes(tag.toLowerCase()))) return false;
+      }
+      return true;
+    });
 
     React.useEffect(() => {
       fetch("data.json")
@@ -17,11 +45,13 @@ function App() {
       <div>
         <Topbar filtersVisible={showFilters} onToggleFilters={() => setShowFilters(v => !v)} />
         <main className="content">
-          {showFilters && <FilterBar />}
+          {showFilters && (
+            <FilterBar filters={filters} onChange={updateFilter} onToggleTag={toggleTag} />
+          )}
           <div className="dataset-grid">
             <UploadCard />
             {error && <p style={{ color: "#5F6368" }}>{error}</p>}
-            {datasets.map(dataset => (
+            {filteredDatasets.map(dataset => (
               <DatasetCard dataset={dataset} key={dataset.name} />
             ))}
           </div>
