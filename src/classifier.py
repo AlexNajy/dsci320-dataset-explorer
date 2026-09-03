@@ -5,8 +5,12 @@ CATEGORICAL_UNIQUE_THRESHOLD = 10
 
 geo_keywords = {
     "latitude", "longitude", "lat", "lon", "lng",
-    "city", "state", "country",
-    "zipcode", "zip", "postal_code"
+    "city", "state", "country", "nation",
+    "zipcode", "zip", "postal_code",
+    "region", "province", "district", "borough",
+    "iso_code", "isocode", "noc", "fips",
+    "location", "locationid", "address",
+    "continent", "territory",
 }
 
 temporal_keywords = {
@@ -18,8 +22,13 @@ categorical_keywords = [
     "group", "label", "status", "rank", "tier",
 ]
 
+def to_snake(name):
+    s1 = re.sub(r'(.)([A-Z][a-z]+)', r'\1_\2', name)
+    s2 = re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', s1)
+    return s2.lower()
+
 def contains_keyword(col_name, keywords):
-    name = col_name.lower()
+    name = to_snake(col_name)
     return any(re.search(rf'(^|_){re.escape(kw)}($|_)', name) for kw in keywords)
 
 def classify_column(series, col_name):

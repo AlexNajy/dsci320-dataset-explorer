@@ -1,11 +1,14 @@
 from build_classifications import build_classifications
 from build_tracker import build_tracker
+from build_ml_tags import build_ml_tags
+from build_site_data import build_site_data
 
 def main():
-    print("Classifying Columns...")
+    print("Running full pipeline...")
     build_classifications()
-    print("Tracking Results...")
     build_tracker()
+    build_ml_tags()
+    build_site_data()
     print("Done.")
 
 if __name__ == "__main__":
