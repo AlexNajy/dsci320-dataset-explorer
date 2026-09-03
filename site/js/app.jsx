@@ -2,6 +2,7 @@ function App() {
     const [datasets, setDatasets] = React.useState([]);
     const [error, setError] = React.useState(null);
     const [showFilters, setShowFilters] = React.useState(false);
+    const [selectedDataset, setSelectedDataset] = React.useState(null);
     const [filters, setFilters] = React.useState({
       meetsMinOnly: false,
       ...Object.fromEntries(MIN_FIELDS.map(({ key }) => [key, ""])),
@@ -52,10 +53,13 @@ function App() {
             <UploadCard />
             {error && <p style={{ color: "#5F6368" }}>{error}</p>}
             {filteredDatasets.map(dataset => (
-              <DatasetCard dataset={dataset} key={dataset.name} />
+              <DatasetCard dataset={dataset} key={dataset.name} onSelect={setSelectedDataset} />
             ))}
           </div>
         </main>
+        {selectedDataset && (
+          <DatasetDetail dataset={selectedDataset} onClose={() => setSelectedDataset(null)} />
+        )}
       </div>
     );
   }

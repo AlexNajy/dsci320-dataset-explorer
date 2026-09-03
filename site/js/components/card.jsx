@@ -28,11 +28,22 @@ function parseTags(tagsString) {
     );
   }
   
-  function DatasetCard({ dataset }) {
+  function DatasetCard({ dataset, onSelect }) {
     const passes = dataset.meets_minimum === true;
 
     return (
-      <div className="dataset-card">
+      <div
+        className="dataset-card dataset-card-clickable"
+        role="button"
+        tabIndex={0}
+        onClick={() => onSelect(dataset)}
+        onKeyDown={e => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onSelect(dataset);
+          }
+        }}
+      >
         <div className="card-body">
           <div className="card-name">{dataset.name}</div>
           <div className="stat-grid">

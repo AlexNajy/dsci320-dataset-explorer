@@ -226,6 +226,19 @@
     display: flex;
     flex-direction: column;
   }
+
+  .dataset-card-clickable {
+    cursor: pointer;
+  }
+
+  .dataset-card-clickable:hover {
+    border-color: var(--color-brand);
+  }
+
+  .dataset-card-clickable:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
   
   .card-body {
     padding: 14px 16px 16px;
@@ -328,4 +341,117 @@
     font-size: 15px;
     font-weight: 600;
     color: var(--color-text-primary);
+  }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 100;
+  }
+
+  .modal-panel {
+    background: var(--color-white);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 560px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .modal-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-secondary);
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .modal-close-btn:hover {
+    background: #F1F3F4;
+    color: var(--color-text-primary);
+  }
+
+  .modal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modal-section-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-secondary);
+  }
+
+  .modal-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+  }
+
+  .reason-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .reason-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .reason-text {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+  }
+
+  .modal-source-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-brand);
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .modal-source-link:hover {
+    text-decoration: underline;
+  }
+
+  .modal-source-missing {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    font-style: italic;
   }
