@@ -5,6 +5,7 @@ RAW_FOLDER = "../data/raw"
 ABSTRACTIONS_FOLDER = "../data/abstractions"
 CLASSIFICATIONS_PATH = "../data/metadata/column_classifications.csv"
 OUTPUT_PATH = "../data/tracked/dataset_tracker.csv"
+MANUAL_METADATA_PATH = "../dataset_tracker.csv"
 
 def build_tracker():
     classifications = pd.read_csv(CLASSIFICATIONS_PATH)
@@ -73,6 +74,11 @@ def build_tracker():
         })
 
     output = pd.DataFrame(rows)
+
+    # source_url/description are hand-verified, never computed here — read-only merge.
+    manual_metadata = pd.read_csv(MANUAL_METADATA_PATH)[["name", "source_url", "description"]]
+    output = output.merge(manual_metadata, on="name", how="left")
+
     output.to_csv(OUTPUT_PATH, index=False)
     print(f"build_tracker: saved {len(output)} rows to {OUTPUT_PATH}")
     return output
