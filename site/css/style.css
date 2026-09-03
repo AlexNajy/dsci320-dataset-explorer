@@ -1,5 +1,6 @@
 :root {
     --color-brand: #0055B7;
+    --color-topbar: rgba(77, 126, 200);
     --color-text-primary: #1A1A1A;
     --color-text-secondary: #5F6368;
     --color-white: #FFFFFF;
@@ -20,7 +21,7 @@
   }
 
   .topbar {
-    background: var(--color-brand);
+    background: var(--color-topbar);
     padding: 16px 0 20px;
     position: fixed;
     top: 0;
@@ -95,7 +96,7 @@
   }
 
   .filter-toggle-btn[aria-pressed="true"] {
-    background: var(--color-brand);
+    background: var(--color-topbar);
     color: var(--color-white);
   }
 
@@ -206,8 +207,8 @@
   }
 
   .filter-chip.active {
-    background: var(--color-brand);
-    border-color: var(--color-brand);
+    background: var(--color-topbar);
+    border-color: var(--color-topbar);
     color: var(--color-white);
   }
   
