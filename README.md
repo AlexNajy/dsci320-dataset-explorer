@@ -7,18 +7,17 @@ A searchable, filterable catalog of datasets for DSCI 320. A tool that lets stud
 ```
 dsci320-dataset-explorer/
 ├── data/
-│   ├── abstractions/          Answer Key for CSVs that include an abstraction (name must match the file in raw/)
+│   ├── verified/               Verified answer key CSVs, confirming true column types (name must match the file in raw/)
 │   ├── metadata/              Result of script including column classifications
 │   ├── raw/                   Locally downloaded datasets as CSV files
 │   ├── raw_test/              A test folder of sample data
-│   └── tracked/               Includes a log of all processed data tables compared to potential abstractions
+│   └── tracked/               Includes a log of all processed data tables compared to the verified answer keys
 ├── src/
 │   ├── classifier.py              defines classify_column() that guesses a column's type
 │   ├── build_classifications.py   runs the classifier across data/raw, writes column_classifications.csv
-│   ├── build_tracker.py           compares classifications against data/abstractions, writes dataset_tracker.csv
+│   ├── build_tracker.py           compares classifications against data/verified, writes dataset_tracker.csv
 │   └── main.py                    runs the full pipeline in order
-├── site/                      the actual website
-└── docs/                      write-up and supporting documentation
+└── docs/                      the actual website (served via GitHub Pages)
 ```
 
 ## Setup
@@ -46,5 +45,5 @@ python main.py
 This runs both steps in order
 
 ## Naming rule
-*data/raw/X.csv* must match *data/abstractions/X.csv* exactly for scoring to work.
+*data/raw/X.csv* must match *data/verified/X.csv* exactly for scoring to work.
 

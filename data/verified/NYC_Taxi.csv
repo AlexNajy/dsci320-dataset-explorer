@@ -13,15 +13,9 @@ extra,quantitative
 mta_tax,quantitative
 tip_amount,quantitative
 tolls_amount,quantitative
+ehail_fee,categorical
 improvement_surcharge,quantitative
 total_amount,quantitative
 payment_type,categorical
 trip_type,categorical
 congestion_surcharge,quantitative
-PULocation,geographic
-DOLocation,geographic
-trip_duration,quantitative
-trip_dissatisfaction,quantitative
-month,categorical
-weekday,categorical
-season,categorical

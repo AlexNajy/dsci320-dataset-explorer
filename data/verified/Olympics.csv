@@ -6,11 +6,11 @@ Age,quantitative
 Height,quantitative
 Weight,quantitative
 Team,categorical
-NOC,categorical
+NOC,geographic
 Games,categorical
 Year,temporal
 Season,categorical
-City,categorical
+City,geographic
 Sport,categorical
 Event,categorical
 Medal,categorical

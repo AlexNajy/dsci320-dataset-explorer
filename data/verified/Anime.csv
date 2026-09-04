@@ -13,7 +13,7 @@ episodes,quantitative
 status,categorical
 airing,categorical
 aired,temporal
-duration,quantitative
+duration,categorical
 rating,categorical
 score,quantitative
 scored_by,quantitative
