@@ -1,4 +1,18 @@
+const SEARCH_EXAMPLES = [
+  "usage of video games",
+  "car crash records",
+  "carbon emissions by country",
+  "cab rides around a city",
+  "anime with high ratings",
+  "police traffic stops",
+  "athletes who won medals",
+];
+
 function Topbar({ filtersVisible, onToggleFilters, searchQuery, onSearchChange }) {
+    const [searchExample] = React.useState(
+      () => SEARCH_EXAMPLES[Math.floor(Math.random() * SEARCH_EXAMPLES.length)]
+    );
+
     return (
       <header className="topbar">
         <div className="topbar-inner">
@@ -13,7 +27,7 @@ function Topbar({ filtersVisible, onToggleFilters, searchQuery, onSearchChange }
               </svg>
               <input
                 type="text"
-                placeholder="Search datasets"
+                placeholder={`Search datasets, e.g. "${searchExample}"`}
                 value={searchQuery}
                 onChange={e => onSearchChange(e.target.value)}
               />
