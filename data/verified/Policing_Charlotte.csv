@@ -1,11 +1,15 @@
 column,true_type
+raw_row_number,quantitative
 date,temporal
 time,temporal
-datetime,temporal
+location,geographic
+county_name,geographic
+subject_age,quantitative
 subject_race,categorical
 subject_sex,categorical
-subject_age,quantitative
+officer_id_hash,categorical
 department_name,categorical
+type,categorical
 arrest_made,categorical
 citation_issued,categorical
 warning_issued,categorical
@@ -22,3 +26,5 @@ reason_for_frisk,categorical
 reason_for_search,categorical
 reason_for_stop,categorical
 raw_Ethnicity,categorical
+raw_Race,categorical
+raw_action_description,categorical

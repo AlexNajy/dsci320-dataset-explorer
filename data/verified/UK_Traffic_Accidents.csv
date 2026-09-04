@@ -1,5 +1,5 @@
 column,true_type
-Accident_index,categorical
+Accident_Index,categorical
 1st_Road_Class,categorical
 1st_Road_Number,quantitative
 2nd_Road_Class,categorical
@@ -18,11 +18,11 @@ Local_Authority_(Highway),categorical
 Location_Easting_OSGR,geographic
 Location_Northing_OSGR,geographic
 Longitude,geographic
-LSOA_of_Accident_Location,categorical
+LSOA_of_Accident_Location,geographic
 Number_of_Casualties,quantitative
 Number_of_Vehicles,quantitative
 Pedestrian_Crossing-Human_Control,categorical
-Pedestrian_Crossing-Physical_Facilities,quantitative
+Pedestrian_Crossing-Physical_Facilities,categorical
 Police_Force,categorical
 Road_Surface_Conditions,categorical
 Road_Type,categorical

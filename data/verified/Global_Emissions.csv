@@ -1,8 +1,10 @@
 column,true_type
 Description,categorical
 Name,categorical
-iso_code,categorical
 year,temporal
+iso_code,geographic
+population,quantitative
+gdp,quantitative
 cement_co2,quantitative
 cement_co2_per_capita,quantitative
 co2,quantitative
@@ -37,7 +39,6 @@ flaring_co2,quantitative
 flaring_co2_per_capita,quantitative
 gas_co2,quantitative
 gas_co2_per_capita,quantitative
-gdp,quantitative
 ghg_excluding_lucf_per_capita,quantitative
 ghg_per_capita,quantitative
 land_use_change_co2,quantitative
@@ -50,7 +51,6 @@ oil_co2,quantitative
 oil_co2_per_capita,quantitative
 other_co2_per_capita,quantitative
 other_industry_co2,quantitative
-population,quantitative
 primary_energy_consumption,quantitative
 share_global_cement_co2,quantitative
 share_global_co2,quantitative
