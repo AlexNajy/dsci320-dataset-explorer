@@ -17,8 +17,7 @@ dsci320-dataset-explorer/
 │   ├── build_classifications.py   runs the classifier across data/raw, writes column_classifications.csv
 │   ├── build_tracker.py           compares classifications against data/verified, writes dataset_tracker.csv
 │   └── main.py                    runs the full pipeline in order
-├── site/                      the actual website
-└── docs/                      write-up and supporting documentation
+└── docs/                      the actual website (served via GitHub Pages)
 ```
 
 ## Setup
