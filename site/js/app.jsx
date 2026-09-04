@@ -3,6 +3,7 @@ function App() {
     const [error, setError] = React.useState(null);
     const [showFilters, setShowFilters] = React.useState(false);
     const [selectedDataset, setSelectedDataset] = React.useState(null);
+    const [searchQuery, setSearchQuery] = React.useState("");
     const [filters, setFilters] = React.useState({
       meetsMinOnly: false,
       ...Object.fromEntries(MIN_FIELDS.map(({ key }) => [key, ""])),
@@ -29,6 +30,12 @@ function App() {
         const datasetTags = parseTags(dataset.ml_tags).map(t => t.toLowerCase());
         if (!filters.tags.every(tag => datasetTags.includes(tag.toLowerCase()))) return false;
       }
+      const query = searchQuery.trim().toLowerCase();
+      if (query) {
+        const name = (dataset.name || "").toLowerCase();
+        const description = (dataset.description || "").toLowerCase();
+        if (!name.includes(query) && !description.includes(query)) return false;
+      }
       return true;
     });
 
@@ -44,7 +51,12 @@ function App() {
   
     return (
       <div>
-        <Topbar filtersVisible={showFilters} onToggleFilters={() => setShowFilters(v => !v)} />
+        <Topbar
+          filtersVisible={showFilters}
+          onToggleFilters={() => setShowFilters(v => !v)}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
         <main className="content">
           {showFilters && (
             <FilterBar filters={filters} onChange={updateFilter} onToggleTag={toggleTag} />
