@@ -68,11 +68,6 @@ function countUnique(values) {
   return new Set(values.filter(v => !isMissing(v))).size;
 }
 
-// Python's classifier also checks pandas' datetime64 dtype before falling back to
-// the temporal keyword match, but build_classifications.py never parses dates on
-// read (no parse_dates=), so that branch never actually fires against real data —
-// keyword matching is the only path exercised in the pipeline. This mirrors that
-// observed behavior rather than porting the dead branch.
 function classifyColumn(values, colName) {
   if (containsKeyword(colName, GEO_KEYWORDS)) return "geographic";
   if (containsKeyword(colName, TEMPORAL_KEYWORDS)) return "temporal";

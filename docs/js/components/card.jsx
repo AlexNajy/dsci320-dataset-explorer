@@ -61,9 +61,20 @@ function parseTags(tagsString) {
     );
   }
   
-  function UploadCard() {
+  function UploadCard({ onClick }) {
     return (
-      <div className="dataset-card upload-card">
+      <div
+        className="dataset-card upload-card"
+        role="button"
+        tabIndex={0}
+        onClick={onClick}
+        onKeyDown={e => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onClick();
+          }
+        }}
+      >
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
           <path d="M12 5V19" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
           <path d="M5 12H19" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />

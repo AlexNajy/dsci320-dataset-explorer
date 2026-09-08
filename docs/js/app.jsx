@@ -3,6 +3,7 @@ function App() {
     const [error, setError] = React.useState(null);
     const [showFilters, setShowFilters] = React.useState(false);
     const [selectedDataset, setSelectedDataset] = React.useState(null);
+    const [showUploadModal, setShowUploadModal] = React.useState(false);
     const [searchQuery, setSearchQuery] = React.useState("");
     const [filters, setFilters] = React.useState({
       meetsMinOnly: false,
@@ -39,6 +40,11 @@ function App() {
       return true;
     });
 
+    const handleUploadSubmit = newDataset => {
+      setDatasets(prev => [...prev, newDataset]);
+      setShowUploadModal(false);
+    };
+
     React.useEffect(() => {
       fetch("data.json")
         .then(res => res.json())
@@ -62,7 +68,7 @@ function App() {
             <FilterBar filters={filters} onChange={updateFilter} onToggleTag={toggleTag} />
           )}
           <div className="dataset-grid">
-            <UploadCard />
+            <UploadCard onClick={() => setShowUploadModal(true)} />
             {error && <p style={{ color: "#5F6368" }}>{error}</p>}
             {filteredDatasets.map(dataset => (
               <DatasetCard dataset={dataset} key={dataset.name} onSelect={setSelectedDataset} />
@@ -71,6 +77,13 @@ function App() {
         </main>
         {selectedDataset && (
           <DatasetDetail dataset={selectedDataset} onClose={() => setSelectedDataset(null)} />
+        )}
+        {showUploadModal && (
+          <UploadModal
+            existingNames={datasets.map(d => d.name)}
+            onClose={() => setShowUploadModal(false)}
+            onSubmit={handleUploadSubmit}
+          />
         )}
       </div>
     );
