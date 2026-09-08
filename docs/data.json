@@ -12,7 +12,7 @@
     "source_url":"https:\/\/www.kaggle.com\/datasets\/shreyanshdangi\/co-emissions-across-countries-regions-and-sectors\/data",
     "description":"Historical CO2 and greenhouse gas emissions data by country and region from 1850 to 2023, including population, GDP, and temperature change.",
     "ml_tags":"classification, regression",
-    "ml_reasons":"{'classification': \"categorical column 'Description' has 5 unique values, suitable as a classification target\", 'regression': '76 quantitative columns available as potential targets\/features'}"
+    "ml_reasons":"{'classification': \"categorical column 'temperature_change_from_n2o' has 10 unique values, suitable as a classification target\", 'regression': '75 quantitative columns available as potential targets\/features'}"
   },
   {
     "name":"Anime",
@@ -42,7 +42,7 @@
     "source_url":"https:\/\/www.kaggle.com\/datasets\/salmankhaliq22\/road-traffic-collision-dataset",
     "description":"Road traffic collision records across the United Kingdom from 2005 to 2010, including severity, location, weather, and road conditions.",
     "ml_tags":"classification, forecasting",
-    "ml_reasons":"{'classification': \"categorical column '1st_Road_Class' has 5 unique values, suitable as a classification target\", 'forecasting': '4 temporal columns present, allowing time-based analysis'}"
+    "ml_reasons":"{'classification': \"categorical column '1st_Road_Class' has 4 unique values, suitable as a classification target\", 'forecasting': '4 temporal columns present, allowing time-based analysis'}"
   },
   {
     "name":"NYC_Taxi",
@@ -72,14 +72,29 @@
     "source_url":"https:\/\/openpolicing.stanford.edu\/data\/",
     "description":"Traffic stop records from the Charlotte, North Carolina police department, including driver demographics, stop reasons, and outcomes.",
     "ml_tags":"classification, forecasting",
-    "ml_reasons":"{'classification': \"categorical column 'county_name' has 7 unique values, suitable as a classification target\", 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
+    "ml_reasons":"{'classification': \"categorical column 'county_name' has 2 unique values, suitable as a classification target\", 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
+  },
+  {
+    "name":"Storm_Events",
+    "filepath":"..\/data\/raw\/Storm_Events.csv",
+    "num_columns":51,
+    "num_quantitative":6,
+    "num_categorical":26,
+    "num_temporal":8,
+    "num_geographic":11,
+    "is_verified":false,
+    "meets_minimum":false,
+    "source_url":"https:\/\/www.ncdc.noaa.gov\/stormevents\/",
+    "description":"NOAA National Weather Service storm event records, including event type, timing, location, magnitude, and injury, death, and property damage figures.",
+    "ml_tags":"classification, forecasting, clustering",
+    "ml_reasons":"{'classification': \"categorical column 'EVENT_TYPE' has 3 unique values, suitable as a classification target\", 'forecasting': '8 temporal columns present, allowing time-based analysis', 'clustering': '6 quantitative columns present, no obvious target variable'}"
   },
   {
     "name":"VDem_Democracy",
     "filepath":"..\/data\/raw\/VDem_Democracy.csv",
     "num_columns":4618,
-    "num_quantitative":3342,
-    "num_categorical":1271,
+    "num_quantitative":3297,
+    "num_categorical":1316,
     "num_temporal":2,
     "num_geographic":3,
     "is_verified":false,
@@ -87,7 +102,7 @@
     "source_url":"https:\/\/www.v-dem.net\/data\/the-v-dem-dataset",
     "description":"Country-by-year measures of democratic governance worldwide, covering electoral, liberal, participatory, deliberative, and egalitarian dimensions of democracy.",
     "ml_tags":"classification, regression, forecasting",
-    "ml_reasons":"{'classification': \"categorical column 'project' has 3 unique values, suitable as a classification target\", 'regression': '3342 quantitative columns available as potential targets\/features', 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
+    "ml_reasons":"{'classification': \"categorical column 'project' has 3 unique values, suitable as a classification target\", 'regression': '3297 quantitative columns available as potential targets\/features', 'forecasting': '2 temporal columns present, allowing time-based analysis'}"
   },
   {
     "name":"Steam_Games",
@@ -102,7 +117,22 @@
     "source_url":"https:\/\/www.kaggle.com\/datasets\/artermiloff\/steam-games-dataset\/data",
     "description":"Steam game listings including price, reviews, achievements, playtime statistics, and platform availability.",
     "ml_tags":"classification, regression",
-    "ml_reasons":"{'classification': \"categorical column 'windows' has 2 unique values, suitable as a classification target\", 'regression': '20 quantitative columns available as potential targets\/features'}"
+    "ml_reasons":"{'classification': \"categorical column 'required_age' has 9 unique values, suitable as a classification target\", 'regression': '18 quantitative columns available as potential targets\/features'}"
+  },
+  {
+    "name":"Global_Terrorism",
+    "filepath":"..\/data\/raw\/Global_Terrorism.csv",
+    "num_columns":135,
+    "num_quantitative":18,
+    "num_categorical":95,
+    "num_temporal":5,
+    "num_geographic":17,
+    "is_verified":true,
+    "meets_minimum":true,
+    "source_url":"https:\/\/www.kaggle.com\/datasets\/START-UMD\/gtd",
+    "description":"Global record of terrorist attacks from 1970 to 2017, including date, location, attack\/weapon\/target type, perpetrator group, and casualty and ransom figures.",
+    "ml_tags":"classification, regression",
+    "ml_reasons":"{'classification': \"categorical column 'iyear' has 10 unique values, suitable as a classification target\", 'regression': '26 quantitative columns available as potential targets\/features'}"
   },
   {
     "name":"Olympics",
@@ -118,5 +148,20 @@
     "description":"120 years of Olympic Games athlete records, including personal details, country, sport, event, and medal results.",
     "ml_tags":"classification",
     "ml_reasons":"{'classification': \"categorical column 'Sex' has 2 unique values, suitable as a classification target\"}"
+  },
+  {
+    "name":"US_Accidents",
+    "filepath":"..\/data\/raw\/US_Accidents.csv",
+    "num_columns":46,
+    "num_quantitative":8,
+    "num_categorical":27,
+    "num_temporal":3,
+    "num_geographic":8,
+    "is_verified":false,
+    "meets_minimum":false,
+    "source_url":"https:\/\/www.kaggle.com\/datasets\/sobhanmoosavi\/us-accidents",
+    "description":"Countrywide traffic accident records across the US from 2016 to 2023, including location, weather conditions, road features, and time of occurrence.",
+    "ml_tags":"classification, forecasting, clustering",
+    "ml_reasons":"{'classification': \"categorical column 'Source' has 2 unique values, suitable as a classification target\", 'forecasting': '3 temporal columns present, allowing time-based analysis', 'clustering': '8 quantitative columns present, no obvious target variable'}"
   }
 ]
