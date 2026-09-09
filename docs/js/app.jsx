@@ -77,7 +77,7 @@ function App() {
         if (!filters.tags.every(tag => datasetTags.includes(tag.toLowerCase()))) return false;
       }
       return true;
-    });
+    }).sort((a, b) => (b.meets_minimum === true) - (a.meets_minimum === true));
 
     let filteredDatasets = structurallyFiltered;
     if (debouncedQuery) {
@@ -123,9 +123,19 @@ function App() {
           {showFilters && (
             <FilterBar filters={filters} onChange={updateFilter} onToggleTag={toggleTag} />
           )}
+          {!error && (
+            <p className="results-summary">
+              {debouncedQuery
+                ? `${filteredDatasets.length} result${filteredDatasets.length === 1 ? "" : "s"} for "${debouncedQuery}"`
+                : `${filteredDatasets.length} dataset${filteredDatasets.length === 1 ? "" : "s"}`}
+            </p>
+          )}
           <div className="dataset-grid">
             <UploadCard onClick={() => setShowUploadModal(true)} />
             {error && <p style={{ color: "#5F6368" }}>{error}</p>}
+            {!error && filteredDatasets.length === 0 && (
+              <p className="empty-state">No datasets match your filters.</p>
+            )}
             {filteredDatasets.map(dataset => (
               <DatasetCard dataset={dataset} key={dataset.name} onSelect={setSelectedDataset} />
             ))}

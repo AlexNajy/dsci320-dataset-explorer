@@ -86,3 +86,42 @@ function meetsMinimumCounts(counts) {
     ([type, min]) => (counts[type] || 0) >= min
   );
 }
+
+// Port of src/ml_tagger.py's tag_ml_suitability(). columns: [{ column, type, nunique }]
+function tagMlSuitability(columns) {
+  const tags = [];
+  const reasons = {};
+
+  const numQuant = columns.filter(c => c.type === "quantitative").length;
+  const numTemporal = columns.filter(c => c.type === "temporal").length;
+
+  const classificationCandidate = columns.find(
+    c => c.type === "categorical" && c.nunique >= 2 && c.nunique <= 10
+  );
+  if (classificationCandidate) {
+    tags.push("classification");
+    reasons.classification = `categorical column '${classificationCandidate.column}' has ${classificationCandidate.nunique} unique values, suitable as a classification target`;
+  }
+
+  if (numQuant >= 12) {
+    tags.push("regression");
+    reasons.regression = `${numQuant} quantitative columns available as potential targets/features`;
+  }
+
+  if (numTemporal >= 2) {
+    tags.push("forecasting");
+    reasons.forecasting = `${numTemporal} temporal columns present, allowing time-based analysis`;
+  }
+
+  if (numQuant >= 6 && !tags.includes("regression")) {
+    tags.push("clustering");
+    reasons.clustering = `${numQuant} quantitative columns present, no obvious target variable`;
+  }
+
+  if (tags.length === 0) {
+    tags.push("exploratory only");
+    reasons["exploratory only"] = "insufficient structural variety for an ML task";
+  }
+
+  return { tags, reasons };
+}

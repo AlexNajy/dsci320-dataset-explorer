@@ -17,7 +17,10 @@ function Topbar({ filtersVisible, onToggleFilters, searchQuery, onSearchChange }
       <header className="topbar">
         <div className="topbar-inner">
           <div className="topbar-title-row">
-            <span className="topbar-title">Dataset Explorer</span>
+            <div className="topbar-title-group">
+              <span className="topbar-title">DSCI 320 Dataset Explorer</span>
+              <span className="topbar-subtitle">Find a dataset for your data story project</span>
+            </div>
           </div>
           <div className="search-row">
             <div className="search-bar">

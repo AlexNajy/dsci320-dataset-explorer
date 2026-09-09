@@ -38,6 +38,7 @@ function UploadModal({ onClose, onSubmit, existingNames }) {
   const [parseError, setParseError] = React.useState(null);
   const [columns, setColumns] = React.useState(null);
   const [columnTypes, setColumnTypes] = React.useState({});
+  const [columnUniqueCounts, setColumnUniqueCounts] = React.useState({});
   const [sampled, setSampled] = React.useState(false);
   const [description, setDescription] = React.useState("");
 
@@ -73,13 +74,16 @@ function UploadModal({ onClose, onSubmit, existingNames }) {
       }
 
       const guesses = {};
+      const uniqueCounts = {};
       fields.forEach(col => {
         const values = rows.map(r => r[col]);
         guesses[col] = classifyColumn(values, col);
+        uniqueCounts[col] = countUnique(values);
       });
 
       setColumns(fields);
       setColumnTypes(guesses);
+      setColumnUniqueCounts(uniqueCounts);
       setSampled(wasSampled);
       setIsParsing(false);
     } catch (err) {
@@ -103,6 +107,13 @@ function UploadModal({ onClose, onSubmit, existingNames }) {
       counts[type] = (counts[type] || 0) + 1;
     });
 
+    const mlColumns = columns.map(col => ({
+      column: col,
+      type: columnTypes[col],
+      nunique: columnUniqueCounts[col] || 0,
+    }));
+    const { tags, reasons } = tagMlSuitability(mlColumns);
+
     const dataset = {
       name: deriveUniqueName(fileName, existingNames),
       description: description.trim(),
@@ -111,8 +122,8 @@ function UploadModal({ onClose, onSubmit, existingNames }) {
       num_temporal: counts.temporal,
       num_geographic: counts.geographic,
       meets_minimum: meetsMinimumCounts(counts),
-      ml_tags: "",
-      ml_reasons: "",
+      ml_tags: tags.join(", "),
+      ml_reasons: reasons,
       source_url: null,
     };
 

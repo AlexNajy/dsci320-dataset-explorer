@@ -1,5 +1,6 @@
 function parseMlReasons(reasonsString) {
   if (!reasonsString) return {};
+  if (typeof reasonsString === "object") return reasonsString; // client-computed (upload modal), already a plain object
 
   const reasons = {};
   const pairPattern = /'([^']+)':\s*(?:"((?:[^"\\]|\\.)*)"|'((?:[^'\\]|\\.)*)')/g;
@@ -50,7 +51,7 @@ function DatasetDetail({ dataset, onClose }) {
         </div>
 
         <span className={`status-badge ${passes ? "pass" : "fail"}`} title={MEETS_MIN_TOOLTIP}>
-          {passes ? "Meets minimum" : "Below minimum"}
+          {passes ? "Meets course requirements" : "Below course requirements"}
         </span>
 
         <div className="modal-section">

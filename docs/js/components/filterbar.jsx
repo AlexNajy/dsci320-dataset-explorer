@@ -16,7 +16,7 @@ function FilterBar({ filters, onChange, onToggleTag }) {
           checked={filters.meetsMinOnly}
           onChange={e => onChange("meetsMinOnly", e.target.checked)}
         />
-        <span>Meets minimum requirements</span>
+        <span>Meets course requirements</span>
       </label>
 
       <div className="filter-minimums">

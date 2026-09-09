@@ -1,4 +1,4 @@
-const MEETS_MIN_TOOLTIP = "Minimum requirements: 12+ quantitative, 4+ categorical, 2+ temporal, 2+ geographic columns";
+const MEETS_MIN_TOOLTIP = "Course requirements: 12+ quantitative, 4+ categorical, 2+ temporal, 2+ geographic columns";
 
 function parseTags(tagsString) {
     return (tagsString || "")
@@ -59,7 +59,7 @@ function parseTags(tagsString) {
           </div>
           <TagRow tagsString={dataset.ml_tags} reasonsString={dataset.ml_reasons} />
           <span className={`status-badge ${passes ? "pass" : "fail"}`} title={MEETS_MIN_TOOLTIP}>
-            {passes ? "Meets minimum" : "Below minimum"}
+            {passes ? "Meets course requirements" : "Below course requirements"}
           </span>
         </div>
       </div>
