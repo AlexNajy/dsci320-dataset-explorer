@@ -26,8 +26,11 @@ dsci320-dataset-explorer/
 # from project root
 python3 -m venv venv
 source venv/bin/activate
-pip install pandas
+pip install pandas sentence-transformers
 ```
+
+`sentence-transformers` pulls in PyTorch — a much larger install than pandas alone, and the
+first pipeline run downloads the `all-MiniLM-L6-v2` model weights (~90MB, cached afterward).
 
 Every new session, re-activate the environment before running with:
 ```
