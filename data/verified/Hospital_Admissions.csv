@@ -1,0 +1,57 @@
+column,true_type
+SNO,categorical
+MRD No.,categorical
+D.O.A,temporal
+D.O.D,temporal
+AGE,quantitative
+GENDER,categorical
+RURAL,categorical
+TYPE OF ADMISSION-EMERGENCY/OPD,categorical
+month year,temporal
+DURATION OF STAY,quantitative
+duration of intensive unit stay,quantitative
+OUTCOME,categorical
+SMOKING ,categorical
+ALCOHOL,categorical
+DM,categorical
+HTN,categorical
+CAD,categorical
+PRIOR CMP,categorical
+CKD,categorical
+HB,quantitative
+TLC,quantitative
+PLATELETS,quantitative
+GLUCOSE,quantitative
+UREA,quantitative
+CREATININE,quantitative
+BNP,quantitative
+RAISED CARDIAC ENZYMES,categorical
+EF,quantitative
+SEVERE ANAEMIA,categorical
+ANAEMIA,categorical
+STABLE ANGINA,categorical
+ACS,categorical
+STEMI,categorical
+ATYPICAL CHEST PAIN,categorical
+HEART FAILURE,categorical
+HFREF,categorical
+HFNEF,categorical
+VALVULAR,categorical
+CHB,categorical
+SSS,categorical
+AKI,categorical
+CVA INFRACT,categorical
+CVA BLEED,categorical
+AF,categorical
+VT,categorical
+PSVT,categorical
+CONGENITAL,categorical
+UTI,categorical
+NEURO CARDIOGENIC SYNCOPE,categorical
+ORTHOSTATIC,categorical
+INFECTIVE ENDOCARDITIS,categorical
+DVT,categorical
+CARDIOGENIC SHOCK,categorical
+SHOCK,categorical
+PULMONARY EMBOLISM,categorical
+CHEST INFECTION,categorical

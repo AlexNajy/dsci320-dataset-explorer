@@ -79,6 +79,39 @@ Global_Emissions.csv,total_ghg,quantitative
 Global_Emissions.csv,total_ghg_excluding_lucf,quantitative
 Global_Emissions.csv,trade_co2,quantitative
 Global_Emissions.csv,trade_co2_share,quantitative
+Airbnb_Listings.csv,listing_id,categorical
+Airbnb_Listings.csv,name,categorical
+Airbnb_Listings.csv,host_id,categorical
+Airbnb_Listings.csv,host_since,categorical
+Airbnb_Listings.csv,host_location,geographic
+Airbnb_Listings.csv,host_response_time,temporal
+Airbnb_Listings.csv,host_response_rate,categorical
+Airbnb_Listings.csv,host_acceptance_rate,categorical
+Airbnb_Listings.csv,host_is_superhost,categorical
+Airbnb_Listings.csv,host_total_listings_count,categorical
+Airbnb_Listings.csv,host_has_profile_pic,categorical
+Airbnb_Listings.csv,host_identity_verified,categorical
+Airbnb_Listings.csv,neighbourhood,categorical
+Airbnb_Listings.csv,district,geographic
+Airbnb_Listings.csv,city,geographic
+Airbnb_Listings.csv,latitude,geographic
+Airbnb_Listings.csv,longitude,geographic
+Airbnb_Listings.csv,property_type,categorical
+Airbnb_Listings.csv,room_type,categorical
+Airbnb_Listings.csv,accommodates,categorical
+Airbnb_Listings.csv,bedrooms,categorical
+Airbnb_Listings.csv,amenities,categorical
+Airbnb_Listings.csv,price,quantitative
+Airbnb_Listings.csv,minimum_nights,quantitative
+Airbnb_Listings.csv,maximum_nights,categorical
+Airbnb_Listings.csv,review_scores_rating,quantitative
+Airbnb_Listings.csv,review_scores_accuracy,categorical
+Airbnb_Listings.csv,review_scores_cleanliness,categorical
+Airbnb_Listings.csv,review_scores_checkin,categorical
+Airbnb_Listings.csv,review_scores_communication,categorical
+Airbnb_Listings.csv,review_scores_location,geographic
+Airbnb_Listings.csv,review_scores_value,categorical
+Airbnb_Listings.csv,instant_bookable,categorical
 Anime.csv,animeID,categorical
 Anime.csv,name,categorical
 Anime.csv,title_english,categorical
@@ -140,6 +173,106 @@ UK_Traffic_Accidents.csv,Urban_or_Rural_Area,categorical
 UK_Traffic_Accidents.csv,Weather_Conditions,categorical
 UK_Traffic_Accidents.csv,Year,temporal
 UK_Traffic_Accidents.csv,InScotland,categorical
+Hospital_Admissions.csv,SNO,quantitative
+Hospital_Admissions.csv,MRD No.,quantitative
+Hospital_Admissions.csv,D.O.A,categorical
+Hospital_Admissions.csv,D.O.D,categorical
+Hospital_Admissions.csv,AGE,quantitative
+Hospital_Admissions.csv,GENDER,categorical
+Hospital_Admissions.csv,RURAL,categorical
+Hospital_Admissions.csv,TYPE OF ADMISSION-EMERGENCY/OPD,categorical
+Hospital_Admissions.csv,month year,categorical
+Hospital_Admissions.csv,DURATION OF STAY,quantitative
+Hospital_Admissions.csv,duration of intensive unit stay,quantitative
+Hospital_Admissions.csv,OUTCOME,categorical
+Hospital_Admissions.csv,SMOKING,categorical
+Hospital_Admissions.csv,ALCOHOL,categorical
+Hospital_Admissions.csv,DM,categorical
+Hospital_Admissions.csv,HTN,categorical
+Hospital_Admissions.csv,CAD,categorical
+Hospital_Admissions.csv,PRIOR CMP,categorical
+Hospital_Admissions.csv,CKD,categorical
+Hospital_Admissions.csv,HB,categorical
+Hospital_Admissions.csv,TLC,categorical
+Hospital_Admissions.csv,PLATELETS,categorical
+Hospital_Admissions.csv,GLUCOSE,categorical
+Hospital_Admissions.csv,UREA,categorical
+Hospital_Admissions.csv,CREATININE,categorical
+Hospital_Admissions.csv,BNP,categorical
+Hospital_Admissions.csv,RAISED CARDIAC ENZYMES,categorical
+Hospital_Admissions.csv,EF,categorical
+Hospital_Admissions.csv,SEVERE ANAEMIA,categorical
+Hospital_Admissions.csv,ANAEMIA,categorical
+Hospital_Admissions.csv,STABLE ANGINA,categorical
+Hospital_Admissions.csv,ACS,categorical
+Hospital_Admissions.csv,STEMI,categorical
+Hospital_Admissions.csv,ATYPICAL CHEST PAIN,categorical
+Hospital_Admissions.csv,HEART FAILURE,categorical
+Hospital_Admissions.csv,HFREF,categorical
+Hospital_Admissions.csv,HFNEF,categorical
+Hospital_Admissions.csv,VALVULAR,categorical
+Hospital_Admissions.csv,CHB,categorical
+Hospital_Admissions.csv,SSS,categorical
+Hospital_Admissions.csv,AKI,categorical
+Hospital_Admissions.csv,CVA INFRACT,categorical
+Hospital_Admissions.csv,CVA BLEED,categorical
+Hospital_Admissions.csv,AF,categorical
+Hospital_Admissions.csv,VT,categorical
+Hospital_Admissions.csv,PSVT,categorical
+Hospital_Admissions.csv,CONGENITAL,categorical
+Hospital_Admissions.csv,UTI,categorical
+Hospital_Admissions.csv,NEURO CARDIOGENIC SYNCOPE,categorical
+Hospital_Admissions.csv,ORTHOSTATIC,categorical
+Hospital_Admissions.csv,INFECTIVE ENDOCARDITIS,categorical
+Hospital_Admissions.csv,DVT,categorical
+Hospital_Admissions.csv,CARDIOGENIC SHOCK,categorical
+Hospital_Admissions.csv,SHOCK,categorical
+Hospital_Admissions.csv,PULMONARY EMBOLISM,categorical
+Hospital_Admissions.csv,CHEST INFECTION,categorical
+SF_Restaurant_Inspections.csv,business_id,categorical
+SF_Restaurant_Inspections.csv,business_name,categorical
+SF_Restaurant_Inspections.csv,business_address,geographic
+SF_Restaurant_Inspections.csv,business_city,geographic
+SF_Restaurant_Inspections.csv,business_state,geographic
+SF_Restaurant_Inspections.csv,business_postal_code,geographic
+SF_Restaurant_Inspections.csv,business_latitude,geographic
+SF_Restaurant_Inspections.csv,business_longitude,geographic
+SF_Restaurant_Inspections.csv,business_location,geographic
+SF_Restaurant_Inspections.csv,business_phone_number,quantitative
+SF_Restaurant_Inspections.csv,inspection_id,categorical
+SF_Restaurant_Inspections.csv,inspection_date,temporal
+SF_Restaurant_Inspections.csv,inspection_score,quantitative
+SF_Restaurant_Inspections.csv,inspection_type,categorical
+SF_Restaurant_Inspections.csv,violation_id,categorical
+SF_Restaurant_Inspections.csv,violation_description,categorical
+SF_Restaurant_Inspections.csv,risk_category,categorical
+SF_Restaurant_Inspections.csv,Neighborhoods (old),quantitative
+SF_Restaurant_Inspections.csv,Police Districts,categorical
+SF_Restaurant_Inspections.csv,Supervisor Districts,quantitative
+SF_Restaurant_Inspections.csv,Fire Prevention Districts,quantitative
+SF_Restaurant_Inspections.csv,Zip Codes,quantitative
+SF_Restaurant_Inspections.csv,Analysis Neighborhoods,quantitative
+Sustainable_Energy.csv,Entity,categorical
+Sustainable_Energy.csv,Year,temporal
+Sustainable_Energy.csv,Access to electricity (% of population),quantitative
+Sustainable_Energy.csv,Access to clean fuels for cooking,quantitative
+Sustainable_Energy.csv,Renewable-electricity-generating-capacity-per-capita,quantitative
+Sustainable_Energy.csv,Financial flows to developing countries (US $),quantitative
+Sustainable_Energy.csv,Renewable energy share in the total final energy consumption (%),quantitative
+Sustainable_Energy.csv,Electricity from fossil fuels (TWh),quantitative
+Sustainable_Energy.csv,Electricity from nuclear (TWh),quantitative
+Sustainable_Energy.csv,Electricity from renewables (TWh),quantitative
+Sustainable_Energy.csv,Low-carbon electricity (% electricity),quantitative
+Sustainable_Energy.csv,Primary energy consumption per capita (kWh/person),quantitative
+Sustainable_Energy.csv,Energy intensity level of primary energy (MJ/$2017 PPP GDP),quantitative
+Sustainable_Energy.csv,Value_co2_emissions_kt_by_country,geographic
+Sustainable_Energy.csv,Renewables (% equivalent primary energy),quantitative
+Sustainable_Energy.csv,gdp_growth,quantitative
+Sustainable_Energy.csv,gdp_per_capita,quantitative
+Sustainable_Energy.csv,Density\n(P/Km2),categorical
+Sustainable_Energy.csv,Land Area(Km2),quantitative
+Sustainable_Energy.csv,Latitude,geographic
+Sustainable_Energy.csv,Longitude,geographic
 NYC_Taxi.csv,VendorID,categorical
 NYC_Taxi.csv,lpep_pickup_datetime,temporal
 NYC_Taxi.csv,lpep_dropoff_datetime,temporal
@@ -160,6 +293,61 @@ NYC_Taxi.csv,total_amount,quantitative
 NYC_Taxi.csv,payment_type,categorical
 NYC_Taxi.csv,trip_type,categorical
 NYC_Taxi.csv,congestion_surcharge,categorical
+Earthquakes.csv,Date,temporal
+Earthquakes.csv,Time,temporal
+Earthquakes.csv,Latitude,geographic
+Earthquakes.csv,Longitude,geographic
+Earthquakes.csv,Type,categorical
+Earthquakes.csv,Depth,quantitative
+Earthquakes.csv,Depth Error,quantitative
+Earthquakes.csv,Depth Seismic Stations,quantitative
+Earthquakes.csv,Magnitude,quantitative
+Earthquakes.csv,Magnitude Type,categorical
+Earthquakes.csv,Magnitude Error,quantitative
+Earthquakes.csv,Magnitude Seismic Stations,quantitative
+Earthquakes.csv,Azimuthal Gap,quantitative
+Earthquakes.csv,Horizontal Distance,quantitative
+Earthquakes.csv,Horizontal Error,quantitative
+Earthquakes.csv,Root Mean Square,quantitative
+Earthquakes.csv,ID,categorical
+Earthquakes.csv,Source,categorical
+Earthquakes.csv,Location Source,categorical
+Earthquakes.csv,Magnitude Source,categorical
+Earthquakes.csv,Status,categorical
+NYC_Airbnb.csv,id,categorical
+NYC_Airbnb.csv,name,categorical
+NYC_Airbnb.csv,host_id,categorical
+NYC_Airbnb.csv,host_name,categorical
+NYC_Airbnb.csv,neighbourhood_group,categorical
+NYC_Airbnb.csv,neighbourhood,categorical
+NYC_Airbnb.csv,latitude,geographic
+NYC_Airbnb.csv,longitude,geographic
+NYC_Airbnb.csv,room_type,categorical
+NYC_Airbnb.csv,price,quantitative
+NYC_Airbnb.csv,minimum_nights,quantitative
+NYC_Airbnb.csv,number_of_reviews,quantitative
+NYC_Airbnb.csv,last_review,categorical
+NYC_Airbnb.csv,reviews_per_month,temporal
+NYC_Airbnb.csv,calculated_host_listings_count,quantitative
+NYC_Airbnb.csv,availability_365,quantitative
+NYC_Restaurant_Inspections.csv,CAMIS,quantitative
+NYC_Restaurant_Inspections.csv,DBA,categorical
+NYC_Restaurant_Inspections.csv,BORO,categorical
+NYC_Restaurant_Inspections.csv,BUILDING,categorical
+NYC_Restaurant_Inspections.csv,STREET,categorical
+NYC_Restaurant_Inspections.csv,ZIPCODE,geographic
+NYC_Restaurant_Inspections.csv,PHONE,categorical
+NYC_Restaurant_Inspections.csv,CUISINE DESCRIPTION,categorical
+NYC_Restaurant_Inspections.csv,INSPECTION DATE,categorical
+NYC_Restaurant_Inspections.csv,ACTION,categorical
+NYC_Restaurant_Inspections.csv,VIOLATION CODE,categorical
+NYC_Restaurant_Inspections.csv,VIOLATION DESCRIPTION,categorical
+NYC_Restaurant_Inspections.csv,CRITICAL FLAG,categorical
+NYC_Restaurant_Inspections.csv,SCORE,quantitative
+NYC_Restaurant_Inspections.csv,GRADE,categorical
+NYC_Restaurant_Inspections.csv,GRADE DATE,categorical
+NYC_Restaurant_Inspections.csv,RECORD DATE,categorical
+NYC_Restaurant_Inspections.csv,INSPECTION TYPE,categorical
 Policing_Charlotte.csv,raw_row_number,quantitative
 Policing_Charlotte.csv,date,temporal
 Policing_Charlotte.csv,time,temporal
@@ -189,6 +377,47 @@ Policing_Charlotte.csv,reason_for_stop,categorical
 Policing_Charlotte.csv,raw_Ethnicity,categorical
 Policing_Charlotte.csv,raw_Race,categorical
 Policing_Charlotte.csv,raw_action_description,categorical
+Global_Weather.csv,country,geographic
+Global_Weather.csv,location_name,geographic
+Global_Weather.csv,latitude,geographic
+Global_Weather.csv,longitude,geographic
+Global_Weather.csv,timezone,categorical
+Global_Weather.csv,last_updated_epoch,quantitative
+Global_Weather.csv,last_updated,categorical
+Global_Weather.csv,temperature_celsius,quantitative
+Global_Weather.csv,temperature_fahrenheit,quantitative
+Global_Weather.csv,condition_text,categorical
+Global_Weather.csv,wind_mph,quantitative
+Global_Weather.csv,wind_kph,quantitative
+Global_Weather.csv,wind_degree,quantitative
+Global_Weather.csv,wind_direction,categorical
+Global_Weather.csv,pressure_mb,quantitative
+Global_Weather.csv,pressure_in,quantitative
+Global_Weather.csv,precip_mm,quantitative
+Global_Weather.csv,precip_in,quantitative
+Global_Weather.csv,humidity,quantitative
+Global_Weather.csv,cloud,quantitative
+Global_Weather.csv,feels_like_celsius,quantitative
+Global_Weather.csv,feels_like_fahrenheit,quantitative
+Global_Weather.csv,visibility_km,quantitative
+Global_Weather.csv,visibility_miles,quantitative
+Global_Weather.csv,uv_index,quantitative
+Global_Weather.csv,gust_mph,quantitative
+Global_Weather.csv,gust_kph,quantitative
+Global_Weather.csv,air_quality_Carbon_Monoxide,quantitative
+Global_Weather.csv,air_quality_Ozone,quantitative
+Global_Weather.csv,air_quality_Nitrogen_dioxide,quantitative
+Global_Weather.csv,air_quality_Sulphur_dioxide,quantitative
+Global_Weather.csv,air_quality_PM2.5,quantitative
+Global_Weather.csv,air_quality_PM10,quantitative
+Global_Weather.csv,air_quality_us-epa-index,categorical
+Global_Weather.csv,air_quality_gb-defra-index,categorical
+Global_Weather.csv,sunrise,categorical
+Global_Weather.csv,sunset,categorical
+Global_Weather.csv,moonrise,categorical
+Global_Weather.csv,moonset,categorical
+Global_Weather.csv,moon_phase,categorical
+Global_Weather.csv,moon_illumination,quantitative
 Storm_Events.csv,BEGIN_YEARMONTH,quantitative
 Storm_Events.csv,BEGIN_DAY,temporal
 Storm_Events.csv,BEGIN_TIME,temporal
@@ -4858,6 +5087,37 @@ VDem_Democracy.csv,e_ovexist_0,categorical
 VDem_Democracy.csv,e_ovexist_1,categorical
 VDem_Democracy.csv,e_ovexist_2,categorical
 VDem_Democracy.csv,e_ovexist_3,categorical
+Flight_Delays.csv,YEAR,temporal
+Flight_Delays.csv,MONTH,temporal
+Flight_Delays.csv,DAY,temporal
+Flight_Delays.csv,DAY_OF_WEEK,temporal
+Flight_Delays.csv,AIRLINE,categorical
+Flight_Delays.csv,FLIGHT_NUMBER,quantitative
+Flight_Delays.csv,TAIL_NUMBER,categorical
+Flight_Delays.csv,ORIGIN_AIRPORT,categorical
+Flight_Delays.csv,DESTINATION_AIRPORT,categorical
+Flight_Delays.csv,SCHEDULED_DEPARTURE,quantitative
+Flight_Delays.csv,DEPARTURE_TIME,temporal
+Flight_Delays.csv,DEPARTURE_DELAY,quantitative
+Flight_Delays.csv,TAXI_OUT,quantitative
+Flight_Delays.csv,WHEELS_OFF,quantitative
+Flight_Delays.csv,SCHEDULED_TIME,temporal
+Flight_Delays.csv,ELAPSED_TIME,temporal
+Flight_Delays.csv,AIR_TIME,temporal
+Flight_Delays.csv,DISTANCE,quantitative
+Flight_Delays.csv,WHEELS_ON,quantitative
+Flight_Delays.csv,TAXI_IN,quantitative
+Flight_Delays.csv,SCHEDULED_ARRIVAL,quantitative
+Flight_Delays.csv,ARRIVAL_TIME,temporal
+Flight_Delays.csv,ARRIVAL_DELAY,quantitative
+Flight_Delays.csv,DIVERTED,categorical
+Flight_Delays.csv,CANCELLED,categorical
+Flight_Delays.csv,CANCELLATION_REASON,categorical
+Flight_Delays.csv,AIR_SYSTEM_DELAY,quantitative
+Flight_Delays.csv,SECURITY_DELAY,categorical
+Flight_Delays.csv,AIRLINE_DELAY,quantitative
+Flight_Delays.csv,LATE_AIRCRAFT_DELAY,quantitative
+Flight_Delays.csv,WEATHER_DELAY,quantitative
 Steam_Games.csv,appid,quantitative
 Steam_Games.csv,name,categorical
 Steam_Games.csv,release_date,temporal

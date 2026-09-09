@@ -1,0 +1,22 @@
+column,true_type
+Entity,geographic
+Year,temporal
+Access to electricity (% of population),quantitative
+Access to clean fuels for cooking,quantitative
+Renewable-electricity-generating-capacity-per-capita,quantitative
+Financial flows to developing countries (US $),quantitative
+Renewable energy share in the total final energy consumption (%),quantitative
+Electricity from fossil fuels (TWh),quantitative
+Electricity from nuclear (TWh),quantitative
+Electricity from renewables (TWh),quantitative
+Low-carbon electricity (% electricity),quantitative
+Primary energy consumption per capita (kWh/person),quantitative
+Energy intensity level of primary energy (MJ/$2017 PPP GDP),quantitative
+Value_co2_emissions_kt_by_country,quantitative
+Renewables (% equivalent primary energy),quantitative
+gdp_growth,quantitative
+gdp_per_capita,quantitative
+Density\n(P/Km2),quantitative
+Land Area(Km2),quantitative
+Latitude,geographic
+Longitude,geographic
