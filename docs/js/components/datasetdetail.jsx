@@ -49,7 +49,7 @@ function DatasetDetail({ dataset, onClose }) {
           </button>
         </div>
 
-        <span className={`status-badge ${passes ? "pass" : "fail"}`}>
+        <span className={`status-badge ${passes ? "pass" : "fail"}`} title={MEETS_MIN_TOOLTIP}>
           {passes ? "Meets minimum" : "Below minimum"}
         </span>
 

@@ -1,3 +1,5 @@
+const MEETS_MIN_TOOLTIP = "Minimum requirements: 12+ quantitative, 4+ categorical, 2+ temporal, 2+ geographic columns";
+
 function parseTags(tagsString) {
     return (tagsString || "")
       .split(",")
@@ -14,15 +16,18 @@ function parseTags(tagsString) {
     );
   }
   
-  function TagRow({ tagsString }) {
+  function TagRow({ tagsString, reasonsString }) {
     const tags = parseTags(tagsString);
+    const reasons = parseMlReasons(reasonsString);
 
     if (tags.length === 0) return null;
-  
+
     return (
       <div className="tag-row">
         {tags.map(tag => (
-          <span className="tag-chip" key={tag}>{tag}</span>
+          <span className="tag-chip" key={tag} title={reasons[tag.toLowerCase()] || "No justification recorded."}>
+            {tag}
+          </span>
         ))}
       </div>
     );
@@ -52,8 +57,8 @@ function parseTags(tagsString) {
             <StatItem label="Temporal" value={dataset.num_temporal} />
             <StatItem label="Geographic" value={dataset.num_geographic} />
           </div>
-          <TagRow tagsString={dataset.ml_tags} />
-          <span className={`status-badge ${passes ? "pass" : "fail"}`}>
+          <TagRow tagsString={dataset.ml_tags} reasonsString={dataset.ml_reasons} />
+          <span className={`status-badge ${passes ? "pass" : "fail"}`} title={MEETS_MIN_TOOLTIP}>
             {passes ? "Meets minimum" : "Below minimum"}
           </span>
         </div>
