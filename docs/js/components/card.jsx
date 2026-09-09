@@ -1,3 +1,5 @@
+const MEETS_MIN_TOOLTIP = "Course requirements: 12+ quantitative, 4+ categorical, 2+ temporal, 2+ geographic columns";
+
 function parseTags(tagsString) {
     return (tagsString || "")
       .split(",")
@@ -14,15 +16,18 @@ function parseTags(tagsString) {
     );
   }
   
-  function TagRow({ tagsString }) {
+  function TagRow({ tagsString, reasonsString }) {
     const tags = parseTags(tagsString);
+    const reasons = parseMlReasons(reasonsString);
 
     if (tags.length === 0) return null;
-  
+
     return (
       <div className="tag-row">
         {tags.map(tag => (
-          <span className="tag-chip" key={tag}>{tag}</span>
+          <span className="tag-chip" key={tag} title={reasons[tag.toLowerCase()] || "No justification recorded."}>
+            {tag}
+          </span>
         ))}
       </div>
     );
@@ -52,18 +57,29 @@ function parseTags(tagsString) {
             <StatItem label="Temporal" value={dataset.num_temporal} />
             <StatItem label="Geographic" value={dataset.num_geographic} />
           </div>
-          <TagRow tagsString={dataset.ml_tags} />
-          <span className={`status-badge ${passes ? "pass" : "fail"}`}>
-            {passes ? "Meets minimum" : "Below minimum"}
+          <TagRow tagsString={dataset.ml_tags} reasonsString={dataset.ml_reasons} />
+          <span className={`status-badge ${passes ? "pass" : "fail"}`} title={MEETS_MIN_TOOLTIP}>
+            {passes ? "Meets course requirements" : "Below course requirements"}
           </span>
         </div>
       </div>
     );
   }
   
-  function UploadCard() {
+  function UploadCard({ onClick }) {
     return (
-      <div className="dataset-card upload-card">
+      <div
+        className="dataset-card upload-card"
+        role="button"
+        tabIndex={0}
+        onClick={onClick}
+        onKeyDown={e => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onClick();
+          }
+        }}
+      >
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
           <path d="M12 5V19" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
           <path d="M5 12H19" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />

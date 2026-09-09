@@ -1,0 +1,17 @@
+column,true_type
+id,categorical
+name,categorical
+host_id,categorical
+host_name,categorical
+neighbourhood_group,geographic
+neighbourhood,geographic
+latitude,geographic
+longitude,geographic
+room_type,categorical
+price,quantitative
+minimum_nights,quantitative
+number_of_reviews,quantitative
+last_review,temporal
+reviews_per_month,quantitative
+calculated_host_listings_count,quantitative
+availability_365,quantitative

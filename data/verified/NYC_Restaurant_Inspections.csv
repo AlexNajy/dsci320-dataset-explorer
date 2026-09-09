@@ -1,0 +1,19 @@
+column,true_type
+CAMIS,categorical
+DBA,categorical
+BORO,geographic
+BUILDING,geographic
+STREET,geographic
+ZIPCODE,geographic
+PHONE,categorical
+CUISINE DESCRIPTION,categorical
+INSPECTION DATE,temporal
+ACTION,categorical
+VIOLATION CODE,categorical
+VIOLATION DESCRIPTION,categorical
+CRITICAL FLAG,categorical
+SCORE,quantitative
+GRADE,categorical
+GRADE DATE,temporal
+RECORD DATE,temporal
+INSPECTION TYPE,categorical

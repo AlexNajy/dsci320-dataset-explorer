@@ -1,0 +1,22 @@
+column,true_type
+Date,temporal
+Time,temporal
+Latitude,geographic
+Longitude,geographic
+Type,categorical
+Depth,quantitative
+Depth Error,quantitative
+Depth Seismic Stations,quantitative
+Magnitude,quantitative
+Magnitude Type,categorical
+Magnitude Error,quantitative
+Magnitude Seismic Stations,quantitative
+Azimuthal Gap,quantitative
+Horizontal Distance,quantitative
+Horizontal Error,quantitative
+Root Mean Square,quantitative
+ID,categorical
+Source,categorical
+Location Source,categorical
+Magnitude Source,categorical
+Status,categorical

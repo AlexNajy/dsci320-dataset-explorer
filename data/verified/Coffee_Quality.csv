@@ -1,0 +1,42 @@
+column,true_type
+Unnamed: 0,categorical
+ID,categorical
+Country of Origin,geographic
+Farm Name,categorical
+Lot Number,categorical
+Mill,categorical
+ICO Number,categorical
+Company,categorical
+Altitude,quantitative
+Region,geographic
+Producer,categorical
+Number of Bags,quantitative
+Bag Weight,quantitative
+In-Country Partner,categorical
+Harvest Year,temporal
+Grading Date,temporal
+Owner,categorical
+Variety,categorical
+Status,categorical
+Processing Method,categorical
+Aroma,quantitative
+Flavor,quantitative
+Aftertaste,quantitative
+Acidity,quantitative
+Body,quantitative
+Balance,quantitative
+Uniformity,quantitative
+Clean Cup,quantitative
+Sweetness,quantitative
+Overall,quantitative
+Defects,quantitative
+Total Cup Points,quantitative
+Moisture Percentage,quantitative
+Category One Defects,quantitative
+Quakers,quantitative
+Color,categorical
+Category Two Defects,quantitative
+Expiration,temporal
+Certification Body,categorical
+Certification Address,geographic
+Certification Contact,categorical

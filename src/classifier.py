@@ -3,6 +3,12 @@ import re
 
 CATEGORICAL_UNIQUE_THRESHOLD = 10
 
+def read_csv_safe(path, **kwargs):
+    try:
+        return pd.read_csv(path, encoding="utf-8", **kwargs)
+    except UnicodeDecodeError:
+        return pd.read_csv(path, encoding="latin-1", **kwargs)
+
 geo_keywords = {
     "latitude", "longitude", "lat", "lon", "lng",
     "city", "state", "country", "nation",

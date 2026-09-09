@@ -1,11 +1,14 @@
 import pandas as pd
 import os
 from ml_tagger import tag_ml_suitability
+from classifier import read_csv_safe
 
 SRC_DIR = os.path.dirname(os.path.abspath(__file__))
 RAW_FOLDER = os.path.join(SRC_DIR, "..", "data", "raw")
 CLASSIFICATIONS_PATH = os.path.join(SRC_DIR, "..", "data", "metadata", "column_classifications.csv")
 TRACKER_PATH = os.path.join(SRC_DIR, "..", "data", "tracked", "dataset_tracker.csv")
+
+SAMPLE_ROW_LIMIT = 8000
 
 def build_ml_tags():
     classifications = pd.read_csv(CLASSIFICATIONS_PATH)
@@ -25,7 +28,7 @@ def build_ml_tags():
             ml_reasons_list.append({})
             continue
 
-        df = pd.read_csv(raw_path, low_memory=False)
+        df = read_csv_safe(raw_path, low_memory=False, nrows=SAMPLE_ROW_LIMIT)
 
         dataset_columns = []
         for _, row in dataset_classifications.iterrows():

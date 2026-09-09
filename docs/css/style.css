@@ -4,7 +4,7 @@
     --color-text-primary: #1A1A1A;
     --color-text-secondary: #5F6368;
     --color-white: #FFFFFF;
-    --topbar-height: 116px;
+    --topbar-height: 138px;
   }
 
   * {
@@ -47,11 +47,23 @@
     align-items: center;
   }
   
+  .topbar-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
   .topbar-title {
     color: var(--color-white);
     font-size: 18px;
     font-weight: 600;
     white-space: nowrap;
+  }
+
+  .topbar-subtitle {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    font-weight: 400;
   }
   
   .search-row {
@@ -118,6 +130,19 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 32px 24px 64px;
+  }
+
+  .results-summary {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+  }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    padding: 8px 0 24px;
   }
 
   .filter-bar {
@@ -296,7 +321,7 @@
     padding: 3px 8px;
     border-radius: 3px;
   }
-  
+
   .status-badge {
     align-self: flex-start;
     font-size: 11px;
@@ -304,17 +329,17 @@
     padding: 3px 8px;
     border-radius: 3px;
   }
-  
+
   .status-badge.pass {
     background: #E6F4EA;
     color: #1E7B34;
   }
-  
+
   .status-badge.fail {
     background: #F1F3F4;
     color: var(--color-text-secondary);
   }
-  
+
   .upload-card {
     border: 1.5px dashed #B4B2A9;
     box-shadow: none;
@@ -455,4 +480,95 @@
     font-size: 13px;
     color: var(--color-text-secondary);
     font-style: italic;
+  }
+
+  .upload-file-input {
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--color-text-primary);
+  }
+
+  .upload-status-text {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+  }
+
+  .upload-error {
+    font-size: 13px;
+    color: #B3261E;
+    background: #FDECEA;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+
+  .column-type-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+  }
+
+  .column-type-row {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .column-type-header {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-secondary);
+  }
+
+  .column-type-name {
+    font-size: 13px;
+    color: var(--color-text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .column-type-select {
+    height: 32px;
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    padding: 0 8px;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--color-text-primary);
+    background: var(--color-white);
+  }
+
+  .upload-description-field {
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--color-text-primary);
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    padding: 8px 10px;
+    resize: vertical;
+  }
+
+  .btn-primary {
+    align-self: flex-start;
+    height: 36px;
+    padding: 0 16px;
+    background: var(--color-brand);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .btn-primary:disabled {
+    background: #DADCE0;
+    color: var(--color-text-secondary);
+    cursor: not-allowed;
   }

@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from classifier import read_csv_safe
 
 RAW_FOLDER = "../data/raw"
 VERIFIED_FOLDER = "../data/verified"
@@ -17,7 +18,7 @@ def build_tracker():
 
         base_name = filename[:-4]
         filepath = os.path.join(RAW_FOLDER, filename)
-        num_columns = len(pd.read_csv(filepath, nrows=0).columns)
+        num_columns = len(read_csv_safe(filepath, nrows=0).columns)
 
         verified_path = os.path.join(VERIFIED_FOLDER, f"{base_name}.csv")
         is_verified = os.path.exists(verified_path)
@@ -55,7 +56,6 @@ def build_tracker():
 
     output = pd.DataFrame(rows)
 
-    # source_url/description are hand-verified, never computed here — read-only merge.
     manual_metadata = pd.read_csv(MANUAL_METADATA_PATH)[["name", "source_url", "description"]]
     output = output.merge(manual_metadata, on="name", how="left")
 

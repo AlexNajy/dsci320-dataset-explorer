@@ -1,0 +1,24 @@
+column,true_type
+business_id,categorical
+business_name,categorical
+business_address,geographic
+business_city,geographic
+business_state,geographic
+business_postal_code,geographic
+business_latitude,geographic
+business_longitude,geographic
+business_location,geographic
+business_phone_number,categorical
+inspection_id,categorical
+inspection_date,temporal
+inspection_score,quantitative
+inspection_type,categorical
+violation_id,categorical
+violation_description,categorical
+risk_category,categorical
+Neighborhoods (old),geographic
+Police Districts,geographic
+Supervisor Districts,geographic
+Fire Prevention Districts,geographic
+Zip Codes,geographic
+Analysis Neighborhoods,geographic
