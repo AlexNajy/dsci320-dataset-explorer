@@ -293,6 +293,30 @@ NYC_Taxi.csv,total_amount,quantitative
 NYC_Taxi.csv,payment_type,categorical
 NYC_Taxi.csv,trip_type,categorical
 NYC_Taxi.csv,congestion_surcharge,categorical
+Hurricanes.csv,storm_id,categorical
+Hurricanes.csv,storm_name,categorical
+Hurricanes.csv,num_of_obs,quantitative
+Hurricanes.csv,date,temporal
+Hurricanes.csv,time,temporal
+Hurricanes.csv,record_identifier,categorical
+Hurricanes.csv,status_of_system,categorical
+Hurricanes.csv,latitude,geographic
+Hurricanes.csv,longitude,geographic
+Hurricanes.csv,maximum_sustained_wind_knots,quantitative
+Hurricanes.csv,central_pressure_mb,quantitative
+Hurricanes.csv,34_kt_ne_nm,categorical
+Hurricanes.csv,34_kt_se_nm,categorical
+Hurricanes.csv,34_kt_sw_nm,categorical
+Hurricanes.csv,34_kt_nw_nm,categorical
+Hurricanes.csv,50_kt_ne_nm,categorical
+Hurricanes.csv,50_kt_se_nm,categorical
+Hurricanes.csv,50_kt_sw_nm,categorical
+Hurricanes.csv,50_kt_nw_nm,categorical
+Hurricanes.csv,64_kt_ne_nm,categorical
+Hurricanes.csv,64_kt_se_nm,categorical
+Hurricanes.csv,64_kt_sw_nm,categorical
+Hurricanes.csv,64_kt_nw_nm,categorical
+Hurricanes.csv,radius_of_max_wind_nm,categorical
 Earthquakes.csv,Date,temporal
 Earthquakes.csv,Time,temporal
 Earthquakes.csv,Latitude,geographic
@@ -5300,6 +5324,47 @@ Global_Terrorism.csv,INT_IDEO,categorical
 Global_Terrorism.csv,INT_MISC,categorical
 Global_Terrorism.csv,INT_ANY,categorical
 Global_Terrorism.csv,related,categorical
+Coffee_Quality.csv,Unnamed: 0,quantitative
+Coffee_Quality.csv,ID,categorical
+Coffee_Quality.csv,Country of Origin,categorical
+Coffee_Quality.csv,Farm Name,categorical
+Coffee_Quality.csv,Lot Number,categorical
+Coffee_Quality.csv,Mill,categorical
+Coffee_Quality.csv,ICO Number,categorical
+Coffee_Quality.csv,Company,categorical
+Coffee_Quality.csv,Altitude,categorical
+Coffee_Quality.csv,Region,geographic
+Coffee_Quality.csv,Producer,categorical
+Coffee_Quality.csv,Number of Bags,quantitative
+Coffee_Quality.csv,Bag Weight,categorical
+Coffee_Quality.csv,In-Country Partner,categorical
+Coffee_Quality.csv,Harvest Year,temporal
+Coffee_Quality.csv,Grading Date,temporal
+Coffee_Quality.csv,Owner,categorical
+Coffee_Quality.csv,Variety,categorical
+Coffee_Quality.csv,Status,categorical
+Coffee_Quality.csv,Processing Method,categorical
+Coffee_Quality.csv,Aroma,quantitative
+Coffee_Quality.csv,Flavor,quantitative
+Coffee_Quality.csv,Aftertaste,quantitative
+Coffee_Quality.csv,Acidity,quantitative
+Coffee_Quality.csv,Body,quantitative
+Coffee_Quality.csv,Balance,quantitative
+Coffee_Quality.csv,Uniformity,categorical
+Coffee_Quality.csv,Clean Cup,categorical
+Coffee_Quality.csv,Sweetness,categorical
+Coffee_Quality.csv,Overall,quantitative
+Coffee_Quality.csv,Defects,categorical
+Coffee_Quality.csv,Total Cup Points,quantitative
+Coffee_Quality.csv,Moisture Percentage,quantitative
+Coffee_Quality.csv,Category One Defects,categorical
+Coffee_Quality.csv,Quakers,quantitative
+Coffee_Quality.csv,Color,categorical
+Coffee_Quality.csv,Category Two Defects,quantitative
+Coffee_Quality.csv,Expiration,categorical
+Coffee_Quality.csv,Certification Body,categorical
+Coffee_Quality.csv,Certification Address,geographic
+Coffee_Quality.csv,Certification Contact,categorical
 Olympics.csv,ID,categorical
 Olympics.csv,Name,categorical
 Olympics.csv,Sex,categorical
