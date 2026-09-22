@@ -139,6 +139,56 @@ Anime.csv,background,categorical
 Anime.csv,premiered,categorical
 Anime.csv,broadcast,categorical
 Anime.csv,related,categorical
+Vehicular_Simulation.csv,VehicleID,categorical
+Vehicular_Simulation.csv,Timestamp,temporal
+Vehicular_Simulation.csv,Day,temporal
+Vehicular_Simulation.csv,Hour,categorical
+Vehicular_Simulation.csv,Minute,categorical
+Vehicular_Simulation.csv,Second,categorical
+Vehicular_Simulation.csv,Latitude,geographic
+Vehicular_Simulation.csv,Longitude,geographic
+Vehicular_Simulation.csv,Speed,categorical
+Vehicular_Simulation.csv,Direction,quantitative
+Vehicular_Simulation.csv,StartingPointLatitude,geographic
+Vehicular_Simulation.csv,StartingPointLongitude,geographic
+Vehicular_Simulation.csv,DestinationLatitude,geographic
+Vehicular_Simulation.csv,DestinationLongitude,geographic
+Vehicular_Simulation.csv,CPU_Available,quantitative
+Vehicular_Simulation.csv,Memory_Available,quantitative
+Vehicular_Simulation.csv,BatteryLevel,quantitative
+Vehicular_Simulation.csv,TaskType,categorical
+Vehicular_Simulation.csv,TaskSize,quantitative
+Vehicular_Simulation.csv,TaskPriority,categorical
+Vehicular_Simulation.csv,NetworkLatency,quantitative
+Vehicular_Simulation.csv,SignalStrength,quantitative
+Vehicular_Simulation.csv,TrafficDensity,categorical
+Vehicular_Simulation.csv,WeatherCondition,categorical
+Vehicular_Simulation.csv,RoadCondition,categorical
+Vehicular_Simulation.csv,VehicleType,categorical
+Vehicular_Simulation.csv,VehicleAge,quantitative
+Vehicular_Simulation.csv,EngineTemperature,quantitative
+Vehicular_Simulation.csv,FuelLevel,categorical
+Vehicular_Simulation.csv,TirePressure,quantitative
+Vehicular_Simulation.csv,BrakeFluidLevel,quantitative
+Vehicular_Simulation.csv,CoolantLevel,quantitative
+Vehicular_Simulation.csv,OilLevel,quantitative
+Vehicular_Simulation.csv,WiperFluidLevel,quantitative
+Vehicular_Simulation.csv,HeadlightStatus,categorical
+Vehicular_Simulation.csv,BrakeLightStatus,categorical
+Vehicular_Simulation.csv,TurnSignalStatus,categorical
+Vehicular_Simulation.csv,HazardLightStatus,categorical
+Vehicular_Simulation.csv,ABSStatus,categorical
+Vehicular_Simulation.csv,AirbagStatus,categorical
+Vehicular_Simulation.csv,GPSStatus,categorical
+Vehicular_Simulation.csv,WiFiStatus,categorical
+Vehicular_Simulation.csv,BluetoothStatus,categorical
+Vehicular_Simulation.csv,CellularStatus,categorical
+Vehicular_Simulation.csv,RadarStatus,categorical
+Vehicular_Simulation.csv,LidarStatus,categorical
+Vehicular_Simulation.csv,CameraStatus,categorical
+Vehicular_Simulation.csv,IMUStatus,categorical
+Vehicular_Simulation.csv,Odometer,categorical
+Vehicular_Simulation.csv,TaskOffloaded,categorical
 UK_Traffic_Accidents.csv,Accident_Index,categorical
 UK_Traffic_Accidents.csv,1st_Road_Class,categorical
 UK_Traffic_Accidents.csv,1st_Road_Number,quantitative
@@ -5111,6 +5161,66 @@ VDem_Democracy.csv,e_ovexist_0,categorical
 VDem_Democracy.csv,e_ovexist_1,categorical
 VDem_Democracy.csv,e_ovexist_2,categorical
 VDem_Democracy.csv,e_ovexist_3,categorical
+Smart_City_Energy.csv,Timestamp,temporal
+Smart_City_Energy.csv,Hour of Day,temporal
+Smart_City_Energy.csv,Day of Week,categorical
+Smart_City_Energy.csv,Is Weekend,categorical
+Smart_City_Energy.csv,Is Holiday,categorical
+Smart_City_Energy.csv,Season,categorical
+Smart_City_Energy.csv,Week of Year,temporal
+Smart_City_Energy.csv,Month,temporal
+Smart_City_Energy.csv,Historical Electricity Load (kW),quantitative
+Smart_City_Energy.csv,Peak Load Indicator,categorical
+Smart_City_Energy.csv,Load Sector Type,categorical
+Smart_City_Energy.csv,Transformer Load Level,quantitative
+Smart_City_Energy.csv,Voltage Level (V),quantitative
+Smart_City_Energy.csv,Current Level (A),quantitative
+Smart_City_Energy.csv,Power Factor,quantitative
+Smart_City_Energy.csv,Substation ID / Region ID,categorical
+Smart_City_Energy.csv,Demand Response Signal (Binary),categorical
+Smart_City_Energy.csv,Grid Frequency (Hz),quantitative
+Smart_City_Energy.csv,Solar PV Output (kW),quantitative
+Smart_City_Energy.csv,Wind Power Output (kW),quantitative
+Smart_City_Energy.csv,Solar Panel Temperature (°C),quantitative
+Smart_City_Energy.csv,Wind Speed (m/s),quantitative
+Smart_City_Energy.csv,Wind Direction (degrees),quantitative
+Smart_City_Energy.csv,Inverter Efficiency (%),quantitative
+Smart_City_Energy.csv,Battery State of Charge (SOC) (%),quantitative
+Smart_City_Energy.csv,Battery Discharge Rate (kW/h),quantitative
+Smart_City_Energy.csv,Renewable Forecast Error,quantitative
+Smart_City_Energy.csv,Curtailment Event Flag,categorical
+Smart_City_Energy.csv,Temperature (°C),quantitative
+Smart_City_Energy.csv,Humidity (%),quantitative
+Smart_City_Energy.csv,Solar Irradiance (W/m²),quantitative
+Smart_City_Energy.csv,Cloud Cover (%),quantitative
+Smart_City_Energy.csv,Rainfall (mm),quantitative
+Smart_City_Energy.csv,Snowfall (mm),categorical
+Smart_City_Energy.csv,Visibility (km),quantitative
+Smart_City_Energy.csv,Weather Condition,categorical
+Smart_City_Energy.csv,Atmospheric Pressure (hPa),quantitative
+Smart_City_Energy.csv,Dew Point (°C),quantitative
+Smart_City_Energy.csv,Smart Meter Reading per Building (kW),quantitative
+Smart_City_Energy.csv,Building Type (Encoded),categorical
+Smart_City_Energy.csv,Building Occupancy Rate (%),quantitative
+Smart_City_Energy.csv,Public Transit Operational Load (kW),quantitative
+Smart_City_Energy.csv,EV Charging Station Load (kW),quantitative
+Smart_City_Energy.csv,EV Charging Session Count,quantitative
+Smart_City_Energy.csv,Traffic Congestion Index,quantitative
+Smart_City_Energy.csv,Human Mobility Score,quantitative
+Smart_City_Energy.csv,Region Urban Density Index,quantitative
+Smart_City_Energy.csv,Construction or Maintenance Activity Flag,categorical
+Smart_City_Energy.csv,Time Since Last Peak (hours),quantitative
+Smart_City_Energy.csv,Time Until Next Predicted Peak (hours),quantitative
+Smart_City_Energy.csv,Region/Zone ID,categorical
+Smart_City_Energy.csv,Latitude,geographic
+Smart_City_Energy.csv,Longitude,geographic
+Smart_City_Energy.csv,Altitude (m),quantitative
+Smart_City_Energy.csv,Distance to Nearest Substation (km),quantitative
+Smart_City_Energy.csv,Area Type,categorical
+Smart_City_Energy.csv,Electricity Load,quantitative
+Smart_City_Energy.csv,Renewable Energy Load,quantitative
+Smart_City_Energy.csv,Net Load,quantitative
+Smart_City_Energy.csv,Curtailment Risk / Surplus Flag,categorical
 Flight_Delays.csv,YEAR,temporal
 Flight_Delays.csv,MONTH,temporal
 Flight_Delays.csv,DAY,temporal
